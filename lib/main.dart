@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_portfolio/desktop/desktop_view.dart';
 import 'package:web_portfolio/utils/colors.dart';
+import 'package:web_portfolio/views/portfolio/portfolio_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const DesktopView(),
+      home: const PortfolioView(),
     );
   }
 }
