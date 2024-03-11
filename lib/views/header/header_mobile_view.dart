@@ -20,7 +20,7 @@ class HeaderMobileView extends StatelessWidget {
           children: [
             FlutterLogo(size: 0.3 * height),
             const Spacer(),
-            const HeaderBody(),
+            const HeaderBody(isMobile: true),
           ],
         ),
       ),

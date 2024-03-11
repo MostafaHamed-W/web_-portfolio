@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
+import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
 
 class PortfolioView extends StatelessWidget {
   const PortfolioView({super.key});
@@ -13,6 +14,7 @@ class PortfolioView extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const NavigationBarView(),
             const HeaderView(),
             Container(height: 864, width: 1507, color: Colors.blue),
             SizedBox(

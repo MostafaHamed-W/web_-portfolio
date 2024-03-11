@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/views/header/widgets/header_body.dart';
 
 class HeaderDesktopView extends StatelessWidget {
@@ -10,8 +10,8 @@ class HeaderDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 864,
-      width: 1507,
+      height: Constants.defaultHeight,
+      width: Constants.defaultWidth,
       color: Colors.white,
       child: const Row(
         // mainAxisAlignment: MainAxisAlignment.center,
