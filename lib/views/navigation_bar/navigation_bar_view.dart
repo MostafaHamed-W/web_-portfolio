@@ -10,6 +10,29 @@ class NavigationBarView extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
+        if (constraints.maxWidth < 600) {
+          return Container(
+            height: 60,
+            width: double.infinity,
+            color: Colors.blue,
+            child: Row(
+              children: [
+                const FlutterLogo(),
+                const Spacer(),
+                IconButton(
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                  icon: const Icon(
+                    Icons.menu,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+
         return Container(
           height: Sizes.navBarHeight,
           width: Sizes.defaultWidth,
