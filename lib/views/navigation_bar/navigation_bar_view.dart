@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/constants.dart';
+import 'package:web_portfolio/utils/sizes.dart';
+import 'package:web_portfolio/views/navigation_bar/widgets/navigation_bar_item.dart';
 
 class NavigationBarView extends StatelessWidget {
   const NavigationBarView({super.key});
@@ -9,28 +11,16 @@ class NavigationBarView extends StatelessWidget {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         return Container(
-          height: Constants.navBarHeight,
-          width: Constants.defaultWidth,
+          height: Sizes.navBarHeight,
+          width: Sizes.defaultWidth,
           color: Colors.white,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               children: [
-                const FlutterLogo(
-                  size: 50,
-                ),
+                const FlutterLogo(size: 50),
                 const Spacer(),
-                InkWell(
-                  mouseCursor: MaterialStateMouseCursor.clickable,
-                  hoverColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () {},
-                  child: const Text(
-                    'About',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ),
+                for (var item in kNavigationItems) NavigationBarItem(onTap: () {}, text: item.text),
               ],
             ),
           ),

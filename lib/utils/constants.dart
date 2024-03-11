@@ -1,5 +1,8 @@
-class Constants {
-  static const double defaultWidth = 1507;
-  static const double defaultHeight = 864;
-  static const double navBarHeight = 100;
-}
+import 'package:web_portfolio/views/navigation_bar/widgets/navigation_bar_item.dart';
+
+final kNavigationItems = [
+  NavigationItem('Home'),
+  NavigationItem('Intro'),
+  NavigationItem('Experience'),
+  NavigationItem('Projecs'),
+];
