@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DesktopView extends StatelessWidget {
   const DesktopView({super.key});
@@ -23,13 +24,13 @@ class DesktopView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('i\'m a Mobile Application', style: TextStyle(fontSize: 35)),
-                      const Text('Developer < / >',
-                          style: TextStyle(fontSize: 35, color: Colors.blue)),
+                      Text('i\'m a Mobile Application', style: GoogleFonts.montserrat(fontSize: 50)),
+                      Text('Developer < / >', style: GoogleFonts.montserrat(fontSize: 50)),
+                      const SizedBox(height: 25),
                       const Text(
-                        'i have 2 years of experience in mobile application development\nand building beautifull apps in android and iOS.',
-                        style: TextStyle(fontSize: 18),
-                      ),
+                          'i have 2 years of experience in mobile application development\nand building beautifull apps in android and iOS.',
+                          style: TextStyle(fontSize: 18)),
+                      const SizedBox(height: 30),
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
