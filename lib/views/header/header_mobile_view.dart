@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_portfolio/views/header/widgets/header_body.dart';
 
 class HeaderMobileView extends StatelessWidget {
   const HeaderMobileView({
@@ -13,6 +14,16 @@ class HeaderMobileView extends StatelessWidget {
       height: height * 0.9,
       width: width,
       color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+        child: Column(
+          children: [
+            FlutterLogo(size: 0.3 * height),
+            const Spacer(),
+            const HeaderBody(),
+          ],
+        ),
+      ),
     );
   }
 }
