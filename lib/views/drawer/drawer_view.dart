@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:web_portfolio/utils/constants.dart';
 
 class DrawerView extends StatelessWidget {
   const DrawerView({super.key});
@@ -16,26 +18,30 @@ class DrawerView extends StatelessWidget {
               // Important: Remove any padding from the ListView.
               padding: EdgeInsets.zero,
               children: [
-                const DrawerHeader(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                  ),
-                  child: Text('Drawer Header'),
-                ),
-                ListTile(
-                  title: const Text('Item 1'),
-                  onTap: () {
-                    // Update the state of the app.
-                    // ...
-                  },
-                ),
-                ListTile(
-                  title: const Text('Item 2'),
-                  onTap: () {
-                    // Update the state of the app.
-                    // ...
-                  },
-                ),
+                // const DrawerHeader(
+                //   decoration: BoxDecoration(
+                //     color: Colors.blue,
+                //   ),
+                //   child: Text('Drawer Header'),
+                // ),
+                const SizedBox(height: 20),
+                for (var item in kNavigationItems)
+                  Column(
+                    children: [
+                      ListTile(
+                        contentPadding: const EdgeInsets.only(left: 20),
+                        title: Text(
+                          item.text,
+                          style: GoogleFonts.montserrat(fontSize: 18, fontWeight: FontWeight.w500),
+                        ),
+                        onTap: () {
+                          // Update the state of the app.
+                          // ...
+                        },
+                      ),
+                      const Divider(endIndent: 20, indent: 20),
+                    ],
+                  )
               ],
             ),
           );

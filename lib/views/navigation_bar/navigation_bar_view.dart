@@ -12,9 +12,9 @@ class NavigationBarView extends StatelessWidget {
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth < 600) {
           return Container(
+            color: Colors.white,
             height: 60,
             width: double.infinity,
-            color: Colors.blue,
             child: Row(
               children: [
                 const FlutterLogo(),
@@ -25,7 +25,6 @@ class NavigationBarView extends StatelessWidget {
                   },
                   icon: const Icon(
                     Icons.menu,
-                    color: Colors.white,
                   ),
                 ),
               ],
