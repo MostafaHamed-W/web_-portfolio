@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_portfolio/views/drawer/drawer_view.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
 
@@ -11,6 +12,7 @@ class PortfolioView extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      drawer: const DrawerView(),
       body: SingleChildScrollView(
         child: Column(
           children: [
