@@ -32,7 +32,7 @@ class DrawerView extends StatelessWidget {
                         contentPadding: const EdgeInsets.only(left: 20),
                         title: Text(
                           item.text,
-                          style: GoogleFonts.montserrat(fontSize: 18, fontWeight: FontWeight.w500),
+                          style: GoogleFonts.montserrat(fontWeight: FontWeight.w500),
                         ),
                         onTap: () {
                           // Update the state of the app.

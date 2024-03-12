@@ -12,7 +12,7 @@ class NavigationBarView extends StatelessWidget {
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth < 600) {
           return Container(
-            color: Colors.white,
+            // color: Colors.white,
             height: 60,
             width: double.infinity,
             child: Row(
@@ -35,12 +35,12 @@ class NavigationBarView extends StatelessWidget {
         return Container(
           height: Sizes.navBarHeight,
           width: Sizes.defaultWidth,
-          color: Colors.white,
+          // color: Colors.white,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               children: [
-                const FlutterLogo(size: 50),
+                // const FlutterLogo(size: 50),
                 const Spacer(),
                 for (var item in kNavigationItems) NavigationBarItem(onTap: () {}, text: item.text),
               ],

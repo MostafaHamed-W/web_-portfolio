@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/views/drawer/drawer_view.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
@@ -18,7 +19,7 @@ class PortfolioView extends StatelessWidget {
           children: [
             const NavigationBarView(),
             const HeaderView(),
-            Container(height: 864, width: 1507, color: Colors.blue),
+            Container(height: 864, width: 1507, color: AppColors.kPromaryColor),
             SizedBox(
               height: height,
               width: width,

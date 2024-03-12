@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:web_portfolio/utils/sizes.dart';
 import 'package:web_portfolio/views/header/widgets/header_body.dart';
 
@@ -10,17 +12,21 @@ class HeaderDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Sizes.defaultHeight,
+      height: 764,
       width: Sizes.defaultWidth,
-      color: Colors.white,
-      child: const Row(
+      // color: Colors.white,
+      child: Row(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const Expanded(child: HeaderBody()),
+          // const SizedBox(width: 50),
           Expanded(
-            child: HeaderBody(),
+            child: Image.asset(
+              'assets/images/mainpic2.png',
+              height: 700,
+            ),
           ),
-          SizedBox(width: 50),
-          FlutterLogo(size: 300)
+          const SizedBox(width: 40),
         ],
       ),
     );

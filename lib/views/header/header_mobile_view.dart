@@ -13,13 +13,12 @@ class HeaderMobileView extends StatelessWidget {
     return Container(
       height: height * 0.9,
       width: width,
-      color: Colors.white,
+      // color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         child: Column(
           children: [
-            FlutterLogo(size: 0.3 * height),
-            const Spacer(),
+            Expanded(child: FlutterLogo(size: 0.3 * height)),
             const HeaderBody(isMobile: true),
           ],
         ),
