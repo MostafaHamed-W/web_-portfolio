@@ -13,11 +13,18 @@ class HeaderBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 40),
+      padding: const EdgeInsets.only(left: 50),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          AutoSizeText(
+            'Hi, i am',
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+            ).copyWith(color: AppColors.kPromaryColor, fontWeight: FontWeight.bold),
+            maxLines: 1,
+          ),
           AutoSizeText(
             'Mostafa Hamed',
             style: GoogleFonts.montserrat(fontSize: 50),
@@ -37,22 +44,46 @@ class HeaderBody extends StatelessWidget {
             maxLines: 3,
           ),
           const SizedBox(height: 30),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.kPromaryColor,
-              padding: EdgeInsets.symmetric(vertical: isMobile ? 10 : 17, horizontal: isMobile ? 8 : 15),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5),
+          Row(
+            children: [
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.kPromaryColor,
+                  padding: EdgeInsets.symmetric(vertical: isMobile ? 10 : 17, horizontal: isMobile ? 8 : 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                child: const Text(
+                  'Download CV',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
-            ),
-            child: const Text(
-              'Contact Me',
-              style: TextStyle(
-                color: Colors.white,
+              const SizedBox(width: 30),
+              TextButton(
+                onPressed: () {
+                  // Button pressed action
+                },
+                style: ButtonStyle(
+                  padding: MaterialStatePropertyAll(
+                    EdgeInsets.symmetric(vertical: isMobile ? 10 : 17, horizontal: isMobile ? 8 : 15),
+                  ),
+                  side: MaterialStateProperty.all(const BorderSide(color: AppColors.kPromaryColor)), // Border color
+                  shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))), // Border radius
+
+                  backgroundColor: MaterialStateProperty.all(Colors.transparent), // Transparent button
+                ),
+                child: const Text(
+                  'Contact Me',
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
-            ),
-          )
+            ],
+          ),
         ],
       ),
     );

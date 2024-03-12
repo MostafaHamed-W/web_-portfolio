@@ -11,28 +11,31 @@ class NavigationBarView extends StatelessWidget {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth < 600) {
-          return Container(
+          return SizedBox(
             // color: Colors.white,
             height: 60,
             width: double.infinity,
-            child: Row(
-              children: [
-                const FlutterLogo(),
-                const Spacer(),
-                IconButton(
-                  onPressed: () {
-                    Scaffold.of(context).openDrawer();
-                  },
-                  icon: const Icon(
-                    Icons.menu,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Image.asset('assets/images/logo.png', height: 40),
+                  const Spacer(),
+                  IconButton(
+                    onPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    },
+                    icon: const Icon(
+                      Icons.menu,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           );
         }
 
-        return Container(
+        return SizedBox(
           height: Sizes.navBarHeight,
           width: Sizes.defaultWidth,
           // color: Colors.white,
@@ -40,7 +43,7 @@ class NavigationBarView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               children: [
-                // const FlutterLogo(size: 50),
+                Image.asset('assets/images/logo.png', height: 70),
                 const Spacer(),
                 for (var item in kNavigationItems) NavigationBarItem(onTap: () {}, text: item.text),
               ],

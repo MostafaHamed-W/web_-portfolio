@@ -1,5 +1,5 @@
 import 'dart:ui';
 
 class AppColors {
-  static const kPromaryColor = Color(0xFFfcda69);
+  static const kPromaryColor = Color(0xFFffd94f);
 }

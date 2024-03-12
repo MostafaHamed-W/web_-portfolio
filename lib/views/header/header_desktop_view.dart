@@ -12,7 +12,8 @@ class HeaderDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 764,
+      // height: MediaQuery.of(context).size.height - 200,
+      height: 700,
       width: Sizes.defaultWidth,
       // color: Colors.white,
       child: Row(
@@ -22,11 +23,11 @@ class HeaderDesktopView extends StatelessWidget {
           // const SizedBox(width: 50),
           Expanded(
             child: Image.asset(
-              'assets/images/mainpic2.png',
-              height: 700,
+              'assets/images/pic.png',
+              height: 600,
             ),
           ),
-          const SizedBox(width: 40),
+          // const SizedBox(width: 40),
         ],
       ),
     );

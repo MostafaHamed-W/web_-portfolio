@@ -10,7 +10,7 @@ class HeaderMobileView extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-    return Container(
+    return SizedBox(
       height: height * 0.9,
       width: width,
       // color: Colors.white,
@@ -18,8 +18,13 @@ class HeaderMobileView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         child: Column(
           children: [
-            Expanded(child: FlutterLogo(size: 0.3 * height)),
             const HeaderBody(isMobile: true),
+            Expanded(
+              child: Image.asset(
+                'assets/images/pic.png',
+                // height: height * 0.3,
+              ),
+            ),
           ],
         ),
       ),
