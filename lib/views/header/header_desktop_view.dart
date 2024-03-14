@@ -11,8 +11,10 @@ class HeaderDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final isSmall = width < 950;
+    final imageWidth = width * 0.47;
     return Container(
-      // height: MediaQuery.of(context).size.height - 200,
       height: Sizes.defaultHeight,
       width: Sizes.defaultWidth,
       // color: Colors.white,
@@ -25,11 +27,9 @@ class HeaderDesktopView extends StatelessWidget {
             child: HeaderBody(),
           )),
           // const SizedBox(width: 50),
-          Expanded(
-            // flex: 2,
-            child: Image.asset(
-              'assets/images/pic.png',
-            ),
+          Image.asset(
+            'assets/images/pic.png',
+            width: isSmall ? imageWidth : 500,
           ),
           // const SizedBox(width: 40),
         ],
