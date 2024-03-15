@@ -20,25 +20,27 @@ class HeaderBody extends StatelessWidget {
           'Hi, i am',
           style: GoogleFonts.montserrat(
             fontSize: 20,
-          ).copyWith(color: AppColors.kPromaryColor, fontWeight: FontWeight.bold),
+          ).copyWith(color: AppColors.kPromaryColor),
           maxLines: 1,
         ),
         AutoSizeText(
           'Mostafa Hamed',
-          style: GoogleFonts.montserrat(fontSize: 50),
+          style: GoogleFonts.montserrat(
+            fontSize: isMobile ? 30 : 50,
+          ).copyWith(fontWeight: FontWeight.bold),
           textAlign: TextAlign.left,
           maxLines: 1,
         ),
         AutoSizeText(
           'Mobile Application Developer',
-          style: GoogleFonts.montserrat(fontSize: 30),
+          style: GoogleFonts.montserrat(fontSize: isMobile ? 20 : 30),
           textAlign: TextAlign.left,
           maxLines: 1,
         ),
-        const SizedBox(height: 25),
-        const AutoSizeText(
-          'i have 2 years of experience in mobile application development\nand building beautifull apps in android and iOS.',
-          style: TextStyle(fontSize: 18),
+        SizedBox(height: isMobile ? 5 : 25),
+        AutoSizeText(
+          'I have 2 years of experience in mobile application development\nand building beautifull apps in android and iOS.',
+          style: TextStyle(fontSize: isMobile ? 11 : 18, color: Colors.grey),
           maxLines: 3,
         ),
         const SizedBox(height: 30),

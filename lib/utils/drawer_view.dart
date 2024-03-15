@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:web_portfolio/utils/constants.dart';
 
 class DrawerView extends StatelessWidget {
@@ -7,9 +8,9 @@ class DrawerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth < 600) {
+    return ResponsiveBuilder(
+      builder: (context, size) {
+        if (size.isMobile) {
           return Drawer(
             // Add a ListView to the drawer. This ensures the user can scroll
             // through the options in the drawer if there isn't enough vertical

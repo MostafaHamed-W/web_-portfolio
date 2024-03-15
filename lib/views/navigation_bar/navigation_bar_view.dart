@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/sizes.dart';
 import 'package:web_portfolio/views/navigation_bar/widgets/navigation_bar_item.dart';
@@ -8,9 +9,9 @@ class NavigationBarView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth < 600) {
+    return ResponsiveBuilder(
+      builder: (context, size) {
+        if (size.isMobile) {
           return SizedBox(
             // color: Colors.white,
             height: 60,

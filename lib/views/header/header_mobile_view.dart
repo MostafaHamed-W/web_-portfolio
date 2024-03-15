@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:web_portfolio/views/header/widgets/header_body.dart';
 
 class HeaderMobileView extends StatelessWidget {
@@ -22,7 +24,7 @@ class HeaderMobileView extends StatelessWidget {
             Expanded(
               child: Image.asset(
                 'assets/images/pic.png',
-                // height: height * 0.3,
+                // height: 500,
               ),
             ),
           ],
