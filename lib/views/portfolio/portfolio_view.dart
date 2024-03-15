@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/colors.dart';
-import 'package:web_portfolio/views/drawer/drawer_view.dart';
+import 'package:web_portfolio/utils/drawer_view.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
 

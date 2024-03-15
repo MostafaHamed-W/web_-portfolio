@@ -13,18 +13,22 @@ class HeaderDesktopView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // height: MediaQuery.of(context).size.height - 200,
-      height: 700,
+      height: Sizes.defaultHeight,
       width: Sizes.defaultWidth,
       // color: Colors.white,
       child: Row(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Expanded(child: HeaderBody()),
+          const Expanded(
+              child: Padding(
+            padding: EdgeInsets.only(left: 50),
+            child: HeaderBody(),
+          )),
           // const SizedBox(width: 50),
           Expanded(
+            // flex: 2,
             child: Image.asset(
               'assets/images/pic.png',
-              height: 600,
             ),
           ),
           // const SizedBox(width: 40),
