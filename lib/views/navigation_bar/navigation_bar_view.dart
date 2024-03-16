@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/sizes.dart';
@@ -20,7 +21,10 @@ class NavigationBarView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 children: [
-                  Image.asset('assets/images/logo.png', height: 40),
+                  SvgPicture.asset(
+                    'assets/images/2.svg',
+                    height: 40,
+                  ),
                   const Spacer(),
                   IconButton(
                     onPressed: () {
@@ -44,7 +48,10 @@ class NavigationBarView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               children: [
-                Image.asset('assets/images/logo.png', height: 70),
+                SvgPicture.asset(
+                  'assets/images/2.svg',
+                  height: 60,
+                ),
                 const Spacer(),
                 for (var item in kNavigationItems) NavigationBarItem(onTap: () {}, text: item.text),
               ],
