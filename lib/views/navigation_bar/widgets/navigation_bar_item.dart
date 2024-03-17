@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class NavigationItem {
   final String text;
-  NavigationItem(this.text);
+  const NavigationItem(this.text);
 }
 
 class NavigationBarItem extends StatelessWidget {
@@ -10,10 +10,12 @@ class NavigationBarItem extends StatelessWidget {
     super.key,
     required this.onTap,
     required this.text,
+    this.isSmall = false,
   });
 
   final void Function()? onTap;
   final String text;
+  final bool isSmall;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class NavigationBarItem extends StatelessWidget {
         onTap: onTap,
         child: Text(
           text,
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 20),
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: isSmall ? 13 : 18),
         ),
       ),
     );

@@ -11,7 +11,7 @@ class ProjectDesktopView extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final isSmall = width < 950;
     return Container(
-      color: AppColors.kPromaryColor,
+      // color: AppColors.kPromaryColor,
       padding: const EdgeInsets.symmetric(horizontal: 50),
       height: Sizes.defaultHeight,
       width: Sizes.defaultWidth,

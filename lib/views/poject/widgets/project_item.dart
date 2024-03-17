@@ -11,4 +11,11 @@ class ProjectItem {
   });
 }
 
-final kProjectItems = [ProjectItem(image: '', title: 'title', discription: '', technologies: [])];
+final kProjectItems = [
+  ProjectItem(
+    image: '',
+    title: 'title',
+    discription: '',
+    technologies: [],
+  ),
+];

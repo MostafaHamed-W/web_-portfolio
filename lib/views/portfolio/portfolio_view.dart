@@ -21,7 +21,18 @@ class PortfolioView extends StatelessWidget {
             const NavigationBarView(),
             const HeaderView(),
             const ProjectView(),
-            Container(height: 864, width: 1507, color: AppColors.kPromaryColor),
+            Container(
+              height: 864,
+              width: 1300,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Theme.of(context).colorScheme.background,
+                    const Color(0xffebebec),
+                  ],
+                ),
+              ),
+            ),
             SizedBox(
               height: height,
               width: width,

@@ -12,6 +12,7 @@ class NavigationBarView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, size) {
+        final bool isSmall = size.screenSize.width < 950;
         if (size.isMobile) {
           return SizedBox(
             // color: Colors.white,
@@ -53,7 +54,9 @@ class NavigationBarView extends StatelessWidget {
                   height: 60,
                 ),
                 const Spacer(),
-                for (var item in kNavigationItems) NavigationBarItem(onTap: () {}, text: item.text),
+                for (var item in kNavigationItems) NavigationBarItem(onTap: () {}, text: item.text, isSmall: isSmall),
+                const SizedBox(width: 20),
+                HireMeButton(isSmall: isSmall),
               ],
             ),
           ),

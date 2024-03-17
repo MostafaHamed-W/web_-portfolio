@@ -15,14 +15,25 @@ class HeaderDesktopView extends StatelessWidget {
     final isSmall = width < 950;
     final imageWidth = width * 0.47;
     return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Theme.of(context).colorScheme.background,
+            const Color(0xffebebec),
+          ],
+        ),
+      ),
       padding: const EdgeInsets.symmetric(horizontal: 50),
-      height: Sizes.defaultHeight,
+      height: 670,
       width: Sizes.defaultWidth,
       // color: Colors.white,
       child: Row(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Expanded(child: HeaderBody()),
+          Expanded(
+              child: HeaderBody(
+            isSmall: isSmall,
+          )),
           // const SizedBox(width: 50),
           Image.asset(
             'assets/images/pic.png',
