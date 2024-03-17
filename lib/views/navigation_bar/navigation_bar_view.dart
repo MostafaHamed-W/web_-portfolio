@@ -45,7 +45,7 @@ class NavigationBarView extends StatelessWidget {
           width: Sizes.defaultWidth,
           // color: Colors.white,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Row(
               children: [
                 SvgPicture.asset(

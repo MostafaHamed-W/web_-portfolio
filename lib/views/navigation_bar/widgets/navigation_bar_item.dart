@@ -27,7 +27,7 @@ class NavigationBarItem extends StatelessWidget {
         onTap: onTap,
         child: Text(
           text,
-          style: const TextStyle(fontSize: 18),
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 20),
         ),
       ),
     );

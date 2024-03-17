@@ -15,17 +15,14 @@ class HeaderDesktopView extends StatelessWidget {
     final isSmall = width < 950;
     final imageWidth = width * 0.47;
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 50),
       height: Sizes.defaultHeight,
       width: Sizes.defaultWidth,
       // color: Colors.white,
       child: Row(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Expanded(
-              child: Padding(
-            padding: EdgeInsets.only(left: 50),
-            child: HeaderBody(),
-          )),
+          const Expanded(child: HeaderBody()),
           // const SizedBox(width: 50),
           Image.asset(
             'assets/images/pic.png',

@@ -25,22 +25,23 @@ class HeaderBody extends StatelessWidget {
         ),
         AutoSizeText(
           'Mostafa Hamed',
-          style: GoogleFonts.montserrat(
-            fontSize: isMobile ? 30 : 50,
-          ).copyWith(fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                fontSize: isMobile ? 30 : 50,
+                fontWeight: FontWeight.bold,
+              ),
           textAlign: TextAlign.left,
           maxLines: 1,
         ),
         AutoSizeText(
           'Mobile Application Developer',
-          style: GoogleFonts.montserrat(fontSize: isMobile ? 20 : 30),
+          style: Theme.of(context).textTheme.displayMedium?.copyWith(fontSize: isMobile ? 20 : 30),
           textAlign: TextAlign.left,
           maxLines: 1,
         ),
         SizedBox(height: isMobile ? 5 : 25),
         AutoSizeText(
           'I have 2 years of experience in mobile application development\nand building beautifull apps in android and iOS.',
-          style: TextStyle(fontSize: isMobile ? 11 : 18, color: Colors.grey),
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: isMobile ? 11 : 18, color: Colors.grey),
           maxLines: 3,
         ),
         const SizedBox(height: 30),
@@ -55,11 +56,9 @@ class HeaderBody extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              child: const Text(
+              child: Text(
                 'Download CV',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.white),
               ),
             ),
             const SizedBox(width: 30),
@@ -77,9 +76,9 @@ class HeaderBody extends StatelessWidget {
 
                 backgroundColor: MaterialStateProperty.all(Colors.transparent), // Transparent button
               ),
-              child: const Text(
+              child: Text(
                 'Contact Me',
-                style: TextStyle(color: Colors.black),
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.black),
               ),
             ),
           ],
