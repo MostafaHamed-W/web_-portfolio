@@ -23,6 +23,19 @@ const kBrightMemo = 'assets/images/projects/bight_memo.png';
 const kSpotSavvyBlack = 'assets/images/projects/spot_savvy_black.png';
 const kPulseTalk = 'assets/images/projects/pulse_talk.png';
 
+const List<String> kProjectsPohotos = [
+  kSaipersGate,
+  kGameFusion,
+  kOdexss,
+  kAlameya,
+  kInstaClone,
+  kBookHunter,
+  kSpotSavvy,
+  kCartScope,
+  kBrightMemo,
+  kPulseTalk,
+];
+
 class HireMeButton extends StatelessWidget {
   const HireMeButton({super.key, this.isSmall = false});
   final bool isSmall;

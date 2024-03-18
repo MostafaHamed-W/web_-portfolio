@@ -11,17 +11,8 @@ class ProjectDesktopView extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final isSmall = width < 950;
     return Container(
-      // color: AppColors.kPrimaryColor,
-      // decoration: BoxDecoration(
-      //   gradient: LinearGradient(
-      //     colors: [
-      //       Theme.of(context).colorScheme.background,
-      //       const Color(0xffebebec),
-      //     ],
-      //   ),
-      // ),
-      padding: const EdgeInsets.symmetric(horizontal: 50),
       height: 1500,
+      padding: const EdgeInsets.symmetric(horizontal: 50),
       width: Sizes.defaultWidth,
       child: Column(
         children: [
@@ -46,86 +37,15 @@ class ProjectDesktopView extends StatelessWidget {
                 mainAxisExtent: 350,
               ),
               children: [
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kSaipersGate),
-                ),
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kGameFusion),
-                ),
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kAlameya),
-                ),
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kOdexss),
-                ),
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kInstaClone),
-                ),
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kBookHunter),
-                ),
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kSpotSavvy),
-                ),
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kCartScope),
-                ),
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kPulseTalk),
-                ),
-                InkWell(
-                  onTap: () {},
-                  hoverColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  child: Image.asset(kBrightMemo),
-                ),
+                for (var project in kProjectsPohotos)
+                  InkWell(
+                    onTap: () {},
+                    hoverColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    child: Image.asset(project),
+                  ),
               ],
             ),
           ),
