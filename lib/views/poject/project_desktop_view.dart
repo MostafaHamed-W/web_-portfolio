@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/utils/sizes.dart';
@@ -17,9 +16,52 @@ class ProjectDesktopView extends StatelessWidget {
       width: Sizes.defaultWidth,
       child: Column(
         children: [
+          const SizedBox(height: 30),
           Text(
-            'Projects',
-            style: Theme.of(context).textTheme.headlineLarge,
+            'My Portfolio',
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge
+                ?.copyWith(fontWeight: FontWeight.bold, color: AppColors.kPrimaryColor, fontSize: 18),
+          ),
+          Text(
+            'Recent Works',
+            style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold),
+          ),
+          Expanded(
+            child: GridView(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                childAspectRatio: 1,
+                // mainAxisExtent: 200,
+              ),
+              children: [
+                InkWell(
+                  onTap: () {},
+                  hoverColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  splashColor: Colors.transparent,
+                  child: Image.asset('assets/images/projects/1.png'),
+                ),
+                InkWell(
+                  onTap: () {},
+                  hoverColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  splashColor: Colors.transparent,
+                  child: Image.asset('assets/images/projects/2.png'),
+                ),
+                InkWell(
+                  onTap: () {},
+                  hoverColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  splashColor: Colors.transparent,
+                  child: Image.asset('assets/images/projects/3.png'),
+                ),
+              ],
+            ),
           ),
         ],
       ),

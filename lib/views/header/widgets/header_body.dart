@@ -23,7 +23,7 @@ class HeaderBody extends StatelessWidget {
           'Hi, i am',
           style: GoogleFonts.montserrat(
             fontSize: 20,
-          ).copyWith(color: AppColors.kPromaryColor),
+          ).copyWith(color: AppColors.kPrimaryColor),
           maxLines: 1,
         ),
         AutoSizeText(
@@ -54,7 +54,7 @@ class HeaderBody extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.kPromaryColor,
+                backgroundColor: AppColors.kPrimaryColor,
                 padding: EdgeInsets.symmetric(vertical: isSmall ? 10 : 17, horizontal: isSmall ? 8 : 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
@@ -77,7 +77,7 @@ class HeaderBody extends StatelessWidget {
                 padding: MaterialStatePropertyAll(
                   EdgeInsets.symmetric(vertical: isSmall ? 10 : 17, horizontal: isSmall ? 8 : 15),
                 ),
-                side: MaterialStateProperty.all(const BorderSide(color: AppColors.kPromaryColor)), // Border color
+                side: MaterialStateProperty.all(const BorderSide(color: AppColors.kPrimaryColor)), // Border color
                 shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))), // Border radius
 

@@ -20,7 +20,7 @@ class HireMeButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {},
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.kPromaryColor,
+        backgroundColor: AppColors.kPrimaryColor,
         padding: EdgeInsets.symmetric(vertical: isSmall ? 10 : 17, horizontal: isSmall ? 8 : 15),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),

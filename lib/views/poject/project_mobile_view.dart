@@ -9,7 +9,7 @@ class ProjectMobileView extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Container(
-      color: AppColors.kPromaryColor,
+      color: AppColors.kPrimaryColor,
       height: height * 0.9,
       width: width,
     );

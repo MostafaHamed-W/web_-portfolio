@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Mostafa Hamed',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: AppColors.kPromaryColor,
+          seedColor: AppColors.kPrimaryColor,
           // background: Colors.white,
         ),
         textTheme: TextTheme(
