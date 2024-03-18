@@ -11,6 +11,17 @@ const kNavigationItems = [
 ];
 
 const kAvertaFont = 'Averta';
+const kSaipersGate = 'assets/images/projects/saipers_gate.png';
+const kOdexss = 'assets/images/projects/odexss.png';
+const kAlameya = 'assets/images/projects/alameya.png';
+const kInstaClone = 'assets/images/projects/insta_clone.png';
+const kBookHunter = 'assets/images/projects/book_hunter.png';
+const kGameFusion = 'assets/images/projects/game_fusion.png';
+const kCartScope = 'assets/images/projects/cart_scope.png';
+const kSpotSavvy = 'assets/images/projects/spot_savvy.png';
+const kBrightMemo = 'assets/images/projects/bight_memo.png';
+const kSpotSavvyBlack = 'assets/images/projects/spot_savvy_black.png';
+const kPulseTalk = 'assets/images/projects/pulse_talk.png';
 
 class HireMeButton extends StatelessWidget {
   const HireMeButton({super.key, this.isSmall = false});
