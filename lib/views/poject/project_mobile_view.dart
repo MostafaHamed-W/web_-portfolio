@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/views/poject/project_desktop_view.dart';
@@ -14,6 +15,18 @@ class ProjectMobileView extends StatelessWidget {
       width: width,
       child: Column(
         children: [
+          const SizedBox(height: 30),
+          Text(
+            'My Portfolio',
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge
+                ?.copyWith(fontWeight: FontWeight.bold, color: AppColors.kPrimaryColor, fontSize: 18),
+          ),
+          Text(
+            'Recent Works',
+            style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold),
+          ),
           for (var item in kProjectsPohotos)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 100),

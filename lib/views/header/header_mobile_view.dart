@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:web_portfolio/views/header/widgets/header_body.dart';
 
 class HeaderMobileView extends StatelessWidget {
@@ -12,10 +10,18 @@ class HeaderMobileView extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-    return SizedBox(
+    return Container(
       height: height * 0.9,
       width: width,
       // color: Colors.white,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Theme.of(context).colorScheme.background,
+            const Color(0xffebebec),
+          ],
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         child: Column(
