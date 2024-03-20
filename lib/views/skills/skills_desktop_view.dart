@@ -29,6 +29,31 @@ class SkillsDesktopView extends StatelessWidget {
             'My Expertise Area',
             style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold),
           ),
+          const SizedBox(height: 30),
+          Column(
+            children: [
+              Row(
+                children: [
+                  for (var index = 0; index < kSkillsNames.length / 2; index++)
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(left: index == 0 ? 0 : 9),
+                        child: Container(
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: AppColors.kPrimaryColor, width: 3),
+                            borderRadius: BorderRadius.circular(3),
+                          ),
+                          child: Text(
+                            kSkillsNames.elementAt(index),
+                          ),
+                        ),
+                      ),
+                    )
+                ],
+              ),
+            ],
+          )
         ],
       ),
     );

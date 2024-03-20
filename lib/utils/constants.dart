@@ -10,7 +10,7 @@ const kNavigationItems = [
   NavigationItem('Projecs'),
 ];
 
-const skillsNames = [
+const kSkillsNames = [
   "Flutter",
   "Dart",
   "Riverpod",
