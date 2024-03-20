@@ -37,20 +37,33 @@ class ProjectDesktopView extends StatelessWidget {
                 mainAxisExtent: 350,
               ),
               children: [
-                for (var project in kProjectsPohotos)
-                  InkWell(
-                    onTap: () {},
-                    hoverColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    splashColor: Colors.transparent,
-                    child: Image.asset(project),
-                  ),
+                for (var project in kProjectsPohotos) ProjectItemWidget(project: project),
               ],
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class ProjectItemWidget extends StatelessWidget {
+  const ProjectItemWidget({
+    super.key,
+    required this.project,
+  });
+
+  final String project;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {},
+      hoverColor: Colors.transparent,
+      focusColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      splashColor: Colors.transparent,
+      child: Image.asset(project),
     );
   }
 }

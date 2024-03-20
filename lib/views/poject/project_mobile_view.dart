@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:web_portfolio/utils/colors.dart';
+import 'package:web_portfolio/utils/constants.dart';
+import 'package:web_portfolio/views/poject/project_desktop_view.dart';
 
 class ProjectMobileView extends StatelessWidget {
   const ProjectMobileView({super.key});
@@ -9,9 +11,16 @@ class ProjectMobileView extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Container(
-      color: AppColors.kPrimaryColor,
-      height: height * 0.9,
       width: width,
+      child: Column(
+        children: [
+          for (var item in kProjectsPohotos)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 100),
+              child: ProjectItemWidget(project: item),
+            ),
+        ],
+      ),
     );
   }
 }
