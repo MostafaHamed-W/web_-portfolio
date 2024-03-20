@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/constants.dart';
+import 'package:web_portfolio/utils/helper.dart';
 import 'package:web_portfolio/utils/sizes.dart';
 import 'package:web_portfolio/views/header/widgets/header_body.dart';
 
@@ -14,14 +15,7 @@ class HeaderDesktopView extends StatelessWidget {
     final isSmall = width < 950;
     final imageWidth = width * 0.47;
     return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Theme.of(context).colorScheme.background,
-            const Color(0xffebebec),
-          ],
-        ),
-      ),
+      decoration: getGraidentBackround(context),
       padding: kScreenPadding,
       height: 670,
       width: Sizes.defaultWidth,
