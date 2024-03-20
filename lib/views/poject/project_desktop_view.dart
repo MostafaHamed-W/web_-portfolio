@@ -12,7 +12,7 @@ class ProjectDesktopView extends StatelessWidget {
     final isSmall = width < 950;
     return Container(
       height: 1500,
-      padding: const EdgeInsets.symmetric(horizontal: 50),
+      padding: kScreenPadding,
       width: Sizes.defaultWidth,
       child: Column(
         children: [

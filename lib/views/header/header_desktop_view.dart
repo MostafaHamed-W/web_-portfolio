@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/sizes.dart';
 import 'package:web_portfolio/views/header/widgets/header_body.dart';
 
@@ -21,7 +22,7 @@ class HeaderDesktopView extends StatelessWidget {
           ],
         ),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 50),
+      padding: kScreenPadding,
       height: 670,
       width: Sizes.defaultWidth,
       // color: Colors.white,

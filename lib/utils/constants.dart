@@ -36,6 +36,8 @@ const List<String> kProjectsPohotos = [
   kPulseTalk,
 ];
 
+const kScreenPadding = EdgeInsets.symmetric(horizontal: 50);
+
 class HireMeButton extends StatelessWidget {
   const HireMeButton({super.key, this.isSmall = false});
   final bool isSmall;
