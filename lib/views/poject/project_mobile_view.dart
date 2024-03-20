@@ -28,9 +28,9 @@ class ProjectMobileView extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold),
           ),
           for (var item in kProjectsPohotos)
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 100),
-              child: ProjectItemWidget(project: item),
+            ProjectItemWidget(
+              project: item,
+              width: width * 0.7,
             ),
         ],
       ),

@@ -51,9 +51,11 @@ class ProjectItemWidget extends StatelessWidget {
   const ProjectItemWidget({
     super.key,
     required this.project,
+    this.width,
   });
 
   final String project;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +65,10 @@ class ProjectItemWidget extends StatelessWidget {
       focusColor: Colors.transparent,
       highlightColor: Colors.transparent,
       splashColor: Colors.transparent,
-      child: Image.asset(project),
+      child: Image.asset(
+        project,
+        width: width,
+      ),
     );
   }
 }
