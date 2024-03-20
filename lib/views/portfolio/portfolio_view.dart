@@ -4,6 +4,7 @@ import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
 
 import 'package:web_portfolio/views/poject/project_view.dart';
+import 'package:web_portfolio/views/skills/skills_view.dart';
 
 class PortfolioView extends StatelessWidget {
   const PortfolioView({super.key});
@@ -12,15 +13,17 @@ class PortfolioView extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-
+    final ScrollController scrollController = ScrollController(initialScrollOffset: 2200);
     return Scaffold(
       drawer: const DrawerView(),
       body: SingleChildScrollView(
+        controller: scrollController,
         child: Column(
           children: [
             const NavigationBarView(),
             const HeaderView(),
             const ProjectView(),
+            const SkillsView(),
             Container(
               height: 864,
               width: 1300,

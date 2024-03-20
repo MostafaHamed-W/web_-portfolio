@@ -10,6 +10,18 @@ const kNavigationItems = [
   NavigationItem('Projecs'),
 ];
 
+const skillsNames = [
+  "Flutter",
+  "Dart",
+  "Riverpod",
+  "Bloc",
+  "GetX",
+  "Firebase",
+  "Github",
+  'IOS',
+  'Swift',
+];
+
 const kAvertaFont = 'Averta';
 const kSaipersGate = 'assets/images/projects/saipers_gate.png';
 const kOdexss = 'assets/images/projects/odexss.png';
