@@ -19,7 +19,6 @@ const kSkillsNames = [
   "Firebase",
   "Github",
   'IOS',
-  'Swift',
 ];
 
 const kAvertaFont = 'Averta';
