@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+import 'package:web_portfolio/components/mobile_desktop_view_builder.dart';
 import 'package:web_portfolio/views/poject/project_desktop_view.dart';
 import 'package:web_portfolio/views/poject/project_mobile_view.dart';
 
@@ -8,14 +8,6 @@ class ProjectView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(
-      builder: (BuildContext context, SizingInformation size) {
-        if (size.isMobile) {
-          return const ProjectMobileView();
-        } else {
-          return const ProjectDesktopView();
-        }
-      },
-    );
+    return const MobileDesktopViewBuilder(mobileView: ProjectMobileView(), desktopView: ProjectDesktopView());
   }
 }

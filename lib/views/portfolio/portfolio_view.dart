@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_portfolio/utils/drawer_view.dart';
+import 'package:web_portfolio/views/drawer/drawer_view.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
 
@@ -24,18 +24,6 @@ class PortfolioView extends StatelessWidget {
             const HeaderView(),
             const ProjectView(),
             const SkillsView(),
-            // Container(
-            //   height: 864,
-            //   width: 1300,
-            //   decoration: BoxDecoration(
-            //     gradient: LinearGradient(
-            //       colors: [
-            //         Theme.of(context).colorScheme.background,
-            //         const Color(0xffebebec),
-            //       ],
-            //     ),
-            //   ),
-            // ),
             SizedBox(
               height: height,
               width: width,
