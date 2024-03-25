@@ -29,7 +29,21 @@ class ExperienceDesktopView extends StatelessWidget {
 }
 
 final experiences = [
-  ExperienceInfo(company: '', timeline: '', descriptions: []),
-  ExperienceInfo(company: '', timeline: '', descriptions: []),
-  ExperienceInfo(company: '', timeline: '', descriptions: []),
+  ExperienceInfo(
+    company: 'Mobile Application Developer @Expert CO.LTD',
+    timeline: 'Nov 2023  - Present',
+    descriptions: [
+      '- Developed Saipers Gate Application',
+      '- Deploey Saudi Authority for Intellectual Property HR App',
+      '- Worked in team from 3 developers'
+    ],
+  ),
+  ExperienceInfo(
+    company: 'Mobile Application Developer @Tanta University UMIS',
+    timeline: 'Feb 2023 - Nov 2023  (10 mos)',
+    descriptions: [
+      '- Created UMIS Application for students & doctors',
+      '- Worked in team from 4 developers',
+    ],
+  ),
 ];
