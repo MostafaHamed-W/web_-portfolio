@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/views/drawer/drawer_view.dart';
+import 'package:web_portfolio/views/experience/experience_view.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
 
@@ -24,6 +25,7 @@ class PortfolioView extends StatelessWidget {
             const HeaderView(),
             const ProjectView(),
             const SkillsView(),
+            const ExperienceView(),
             SizedBox(
               height: height,
               width: width,
