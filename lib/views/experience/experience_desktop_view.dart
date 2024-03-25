@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/components/desktop_view_builder.dart';
 import 'package:web_portfolio/utils/colors.dart';
+import 'package:web_portfolio/views/experience/models/experience_info.dart';
 
 class ExperienceDesktopView extends StatelessWidget {
   const ExperienceDesktopView({super.key});
@@ -26,3 +27,9 @@ class ExperienceDesktopView extends StatelessWidget {
     );
   }
 }
+
+final experiences = [
+  ExperienceInfo(company: '', timeline: '', descriptions: []),
+  ExperienceInfo(company: '', timeline: '', descriptions: []),
+  ExperienceInfo(company: '', timeline: '', descriptions: []),
+];
