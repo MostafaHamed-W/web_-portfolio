@@ -23,33 +23,19 @@ class ExperienceDesktopView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(firstExperience.company,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    height: 1.3,
-                    fontWeight: FontWeight.bold,
-                  )),
-              Text(
-                firstExperience.timeline,
-                style: const TextStyle(
-                  fontSize: 20,
-                  height: 1.3,
-                ),
-              ),
-              for (var item in firstExperience.descriptions)
-                Text(
-                  item,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    height: 1.3,
-                  ),
-                ),
+              Text(firstExperience.company, style: _textStyle(isBold: true)),
+              Text(firstExperience.timeline, style: _textStyle()),
+              for (var item in firstExperience.descriptions) Text(item, style: _textStyle()),
             ],
           ),
         ),
       ],
     );
   }
+}
+
+TextStyle _textStyle({bool? isBold}) {
+  return TextStyle(fontSize: 20, height: 1.3, fontWeight: isBold == true ? FontWeight.bold : FontWeight.normal);
 }
 
 final experiences = [
