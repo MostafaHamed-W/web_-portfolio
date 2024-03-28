@@ -8,19 +8,43 @@ class ExperienceDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final firstExperience = experiences.first;
     return DesktopViewBuilder(
       mainText: 'My Qualifications',
       subText: 'Awesome Journey',
       children: [
-        const SizedBox(height: 30),
+        const SizedBox(height: 20),
         Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             border: Border.all(color: AppColors.kPrimaryColor, width: 3),
             borderRadius: BorderRadius.circular(3),
           ),
-          child: const Text(
-            'My Experience',
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(firstExperience.company,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    height: 1.3,
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text(
+                firstExperience.timeline,
+                style: const TextStyle(
+                  fontSize: 20,
+                  height: 1.3,
+                ),
+              ),
+              for (var item in firstExperience.descriptions)
+                Text(
+                  item,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    height: 1.3,
+                  ),
+                ),
+            ],
           ),
         ),
       ],
