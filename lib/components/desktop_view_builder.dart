@@ -26,6 +26,7 @@ class DesktopViewBuilder extends StatelessWidget {
       width: Sizes.defaultWidth,
       decoration: isGraidentBackground ? getGraidentBackround(context) : null,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 30),
           Text(
