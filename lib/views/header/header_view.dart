@@ -13,7 +13,11 @@ class HeaderView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, size) {
-        return const MobileDesktopViewBuilder(mobileView: HeaderMobileView(), desktopView: HeaderDesktopView());
+        return MobileDesktopViewBuilder(
+          showMobile: size.screenSize.width < 700,
+          mobileView: const HeaderMobileView(),
+          desktopView: const HeaderDesktopView(),
+        );
       },
     );
   }

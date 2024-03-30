@@ -13,9 +13,12 @@ class ExperienceContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.kPrimaryColor, width: 3),
+        border: Border.all(
+          color: AppColors.kPrimaryColor,
+          width: 3,
+        ),
         borderRadius: BorderRadius.circular(3),
       ),
       child: Column(

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/utils/constants.dart';
@@ -36,9 +37,10 @@ class MobileViewBuilder extends StatelessWidget {
                 .bodyLarge
                 ?.copyWith(fontWeight: FontWeight.bold, color: AppColors.kPrimaryColor, fontSize: 18),
           ),
-          Text(
+          AutoSizeText(
             subText,
             style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold),
+            maxLines: 1,
           ),
           SizedBox(height: afterTitlePadding),
           ...children,
