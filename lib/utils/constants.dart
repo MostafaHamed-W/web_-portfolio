@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/colors.dart';
+import 'package:web_portfolio/views/experience/models/experience_info.dart';
 import 'package:web_portfolio/views/navigation_bar/widgets/navigation_bar_item.dart';
 
 const kNavigationItems = [
@@ -70,3 +71,41 @@ class HireMeButton extends StatelessWidget {
     );
   }
 }
+
+final kExperiencesList = [
+  ExperienceInfo(
+    company: 'Flutter Developer @Tanta University UMIS',
+    timeline: 'Feb 2023 - Oct 2023  (9 mos) - Tanta',
+    descriptions: [
+      '- Working as junior flutter developer',
+      '- Created UMIS Application for students & doctors',
+      '- Worked in team from 4 developers',
+    ],
+  ),
+  ExperienceInfo(
+    company: 'Flutter Developer @Coding Site(StartUp)',
+    timeline: 'Oct 2023 - Nov 2023  (1 mos) - New 15th of May',
+    descriptions: [
+      '- Making within e comercing & Waregouse projects ',
+      '- Developing MyFridge Mobile application',
+    ],
+  ),
+  ExperienceInfo(
+    company: 'Mobile Application Developer @Expert CO.LTD',
+    timeline: 'Nov 2023  - Present - Saudia',
+    descriptions: [
+      '- Developed Odex SS Application',
+      '- Developed & Maintained Al-Alameya Application ',
+      '- Worked in team from 3 developers'
+    ],
+  ),
+  ExperienceInfo(
+    company: 'Mobile Application Developer @SAIP',
+    timeline: 'Jan 2024  - Present - Saudia',
+    descriptions: [
+      '- Developing Saipers Gate Application',
+      '- Developed & Maintained Saipers Gate Application ',
+      '- Deploying & Version Update Saipers Gate'
+    ],
+  ),
+];
