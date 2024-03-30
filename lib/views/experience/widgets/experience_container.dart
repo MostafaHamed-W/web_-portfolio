@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/views/experience/models/experience_info.dart';
@@ -25,7 +26,9 @@ class ExperienceContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(experience.company, style: _textStyle(isBold: true)),
-          Text(experience.timeline, style: _textStyle()),
+          const SizedBox(height: 5),
+          AutoSizeText(experience.timeline, style: _textStyle(isGrey: true), maxLines: 1),
+          const SizedBox(height: 5),
           for (var item in experience.descriptions) Text(item, style: _textStyle()),
         ],
       ),
@@ -33,6 +36,10 @@ class ExperienceContainer extends StatelessWidget {
   }
 }
 
-TextStyle _textStyle({bool? isBold}) {
-  return TextStyle(fontSize: 17, height: 1.3, fontWeight: isBold == true ? FontWeight.bold : FontWeight.normal);
+TextStyle _textStyle({bool? isBold, bool isGrey = false}) {
+  return TextStyle(
+      fontSize: 17,
+      height: 1.3,
+      fontWeight: isBold == true ? FontWeight.bold : FontWeight.normal,
+      color: isGrey == true ? Colors.grey : Colors.black);
 }
