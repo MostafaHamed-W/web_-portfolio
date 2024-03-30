@@ -31,5 +31,5 @@ class ExperienceContainer extends StatelessWidget {
 }
 
 TextStyle _textStyle({bool? isBold}) {
-  return TextStyle(fontSize: 15, height: 1.3, fontWeight: isBold == true ? FontWeight.bold : FontWeight.normal);
+  return TextStyle(fontSize: 17, height: 1.3, fontWeight: isBold == true ? FontWeight.bold : FontWeight.normal);
 }

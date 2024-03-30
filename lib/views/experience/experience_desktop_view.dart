@@ -8,13 +8,29 @@ class ExperienceDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final firstExperience = kExperiencesList.first;
     return DesktopViewBuilder(
       mainText: 'My Qualifications',
       subText: 'Awesome Journey',
       children: [
         const SizedBox(height: 20),
-        ExperienceContainer(experience: firstExperience),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            for (int rowIndex = 0; rowIndex < kExperiencesList.length / 2; rowIndex++)
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  for (int index = 0; index < kExperiencesList.length / 2; index++)
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ExperienceContainer(experience: kExperiencesList.elementAt(2 * rowIndex + index)),
+                    )
+                ],
+              )),
+          ],
+        )
       ],
     );
   }
