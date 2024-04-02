@@ -32,7 +32,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  flutter_svg: ^2.0.10+1
+  flutter_svg: ^1.0.3
   google_fonts: ^6.2.1
   responsive_builder: ^0.7.0
   webfeed: ^0.7.0
