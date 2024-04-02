@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/components/mobile_view_builder.dart';
-import 'package:web_portfolio/views/blog/blog_desktop_view.dart';
+import 'package:web_portfolio/views/blog/widgets/blog_card.dart';
 
 class BlogMobileView extends StatelessWidget {
   const BlogMobileView({super.key});

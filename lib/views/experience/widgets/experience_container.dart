@@ -25,20 +25,20 @@ class ExperienceContainer extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(experience.company, style: _textStyle(isBold: true)),
+          Text(experience.company, style: textStyle(isBold: true)),
           const SizedBox(height: 5),
-          AutoSizeText(experience.timeline, style: _textStyle(isGrey: true), maxLines: 1),
+          AutoSizeText(experience.timeline, style: textStyle(isGrey: true), maxLines: 1),
           const SizedBox(height: 5),
-          for (var item in experience.descriptions) Text(item, style: _textStyle()),
+          for (var item in experience.descriptions) Text(item, style: textStyle()),
         ],
       ),
     );
   }
 }
 
-TextStyle _textStyle({bool? isBold, bool isGrey = false}) {
+TextStyle textStyle({bool? isBold, bool isGrey = false, double fontSize = 17}) {
   return TextStyle(
-      fontSize: 17,
+      fontSize: fontSize,
       height: 1.3,
       fontWeight: isBold == true ? FontWeight.bold : FontWeight.normal,
       color: isGrey == true ? Colors.grey : Colors.black);
