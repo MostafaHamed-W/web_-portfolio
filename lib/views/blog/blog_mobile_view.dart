@@ -7,8 +7,8 @@ class BlogMobileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MobileViewBuilder(
-      mainText: '  ',
-      subText: '',
+      mainText: 'Blog',
+      subText: 'My Blogs Area',
       isGraidentBackground: true,
       children: [],
     );

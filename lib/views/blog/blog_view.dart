@@ -8,6 +8,6 @@ class BlogView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MobileDesktopViewBuilder(mobileView: BlogDesktopView(), desktopView: BlogMobileView());
+    return const MobileDesktopViewBuilder(mobileView: BlogMobileView(), desktopView: BlogDesktopView());
   }
 }

@@ -16,9 +16,9 @@ class PortfolioView extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     final ScrollController scrollController = ScrollController(
-        // Set the initial offset
-        // initialScrollOffset: 2200,
-        );
+      // Set the initial offset
+      initialScrollOffset: 2800,
+    );
     return Scaffold(
       drawer: const DrawerView(),
       body: SingleChildScrollView(
