@@ -35,6 +35,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   google_fonts: ^6.2.1
   responsive_builder: ^0.7.0
+  webfeed: ^0.7.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
