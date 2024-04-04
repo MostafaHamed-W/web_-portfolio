@@ -13,6 +13,7 @@ class BlogView extends StatelessWidget {
     return FutureBuilder(
         future: getArticles(),
         builder: (context, snapshot) {
+          if (!snapshot.hasData) return const CircularProgressIndicator();
           print(snapshot.data);
           return const MobileDesktopViewBuilder(
             mobileView: BlogMobileView(),
