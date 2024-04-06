@@ -11,9 +11,9 @@ class BlogView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureProvider(
+    return FutureProvider<RssFeed>(
       create: (_) => getArticles(),
-      initialData: getArticles(),
+      initialData: RssFeed(),
       child: const MobileDesktopViewBuilder(
         mobileView: BlogMobileView(),
         desktopView: BlogDesktopView(),
@@ -22,11 +22,10 @@ class BlogView extends StatelessWidget {
   }
 }
 
-getArticles() async {
+Future<RssFeed> getArticles() async {
   const url = 'https://cors-anywhere.herokuapp.com/https://medium.com/feed/@muhamad_haris';
   final uri = Uri.parse(url);
   final response = await http.get(uri);
   final parseResponse = RssFeed.parse(response.body);
-  print(parseResponse);
   return parseResponse;
 }
