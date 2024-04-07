@@ -11,7 +11,7 @@ class BlogView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureProvider<RssFeed>(
+    return FutureProvider<RssFeed?>(
       create: (_) => getArticles(),
       initialData: RssFeed(),
       child: const MobileDesktopViewBuilder(

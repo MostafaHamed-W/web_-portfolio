@@ -9,8 +9,8 @@ class BlogDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final articles = context.watch<RssFeed>();
-    print(articles);
+    final articles = context.watch<RssFeed?>();
+    if (articles == null) return const CircularProgressIndicator();
     return DesktopViewBuilder(
       mainText: 'Blog',
       subText: 'My Blogs Area',
