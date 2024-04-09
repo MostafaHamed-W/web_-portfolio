@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/utils/constants.dart';
 
@@ -71,7 +73,7 @@ class HeaderBody extends StatelessWidget {
             const SizedBox(width: 30),
             TextButton(
               onPressed: () {
-                // Button pressed action
+                launchUrlString('mailto:mostafa.hamed.w@gmail.com?subject=Contact Mostafa&body=Dear%20Mostafa');
               },
               style: ButtonStyle(
                 padding: MaterialStatePropertyAll(
