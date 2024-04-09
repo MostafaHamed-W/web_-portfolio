@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/utils/constants.dart';
+import 'package:web_portfolio/utils/hover_extensions.dart';
 
 class HeaderBody extends StatelessWidget {
   const HeaderBody({
@@ -69,7 +70,7 @@ class HeaderBody extends StatelessWidget {
                     .labelLarge
                     ?.copyWith(color: Colors.white, fontSize: isSmall ? 12 : null),
               ),
-            ),
+            ).moveUpHover,
             const SizedBox(width: 30),
             TextButton(
               onPressed: () {
@@ -92,7 +93,7 @@ class HeaderBody extends StatelessWidget {
                     .labelLarge
                     ?.copyWith(color: Colors.black, fontSize: isSmall ? 12 : null),
               ),
-            ),
+            ).moveUpHover,
           ],
         ),
       ],
