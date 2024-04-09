@@ -19,9 +19,11 @@ class BlogDesktopView extends StatelessWidget {
         const SizedBox(height: 30),
         Row(
           children: [
-            for (int i = 0; i < 2; i++)
-              const Expanded(
-                child: BlogCard(),
+            for (var article in articles)
+              Expanded(
+                child: BlogCard(
+                  article: article,
+                ),
               ),
           ],
         ),

@@ -17,7 +17,11 @@ class BlogMobileView extends StatelessWidget {
       subText: 'My Blogs Area',
       isGraidentBackground: true,
       children: [
-        for (int i = 0; i < 2; i++) const BlogCard(isMobile: true),
+        for (var article in articles)
+          BlogCard(
+            isMobile: true,
+            article: article,
+          ),
       ],
     );
   }

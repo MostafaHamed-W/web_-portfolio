@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/views/experience/widgets/experience_container.dart';
+import 'package:webfeed/domain/rss_item.dart';
 
 class BlogCard extends StatelessWidget {
   const BlogCard({
     super.key,
     this.isMobile = false,
+    this.article,
   });
 
   final bool isMobile;
+  final RssItem? article;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,7 @@ class BlogCard extends StatelessWidget {
             width: double.infinity,
             padding: EdgeInsets.symmetric(vertical: isMobile ? 20 : 40, horizontal: 8),
             child: Text(
-              'How to build a portfolio',
+              article?.title ?? '',
               style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.white),
             ),
           ),
@@ -38,10 +41,10 @@ class BlogCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 8),
-                Text('2 January 2022', style: textStyle(isGrey: true, isBold: false, fontSize: 15)),
+                Text(article?.pubDate.toString() ?? '', style: textStyle(isGrey: true, isBold: false, fontSize: 15)),
                 const SizedBox(height: 8),
                 Text(
-                  'Hello world thank you' * 30,
+                  article?.content?.value ?? '',
                   maxLines: 3,
                 ),
               ],

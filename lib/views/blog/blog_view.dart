@@ -28,7 +28,6 @@ Future<List<RssItem>?> getArticles() async {
   final response = await http.get(uri);
   final parseResponse = RssFeed.parse(response.body);
   haveFlutterTag(RssItem article) => article.categories!.any((category) => category.value == 'flutter');
-  final flutterArticles = parseResponse.items?.where(haveFlutterTag).toList();
-  print(flutterArticles);
+  final flutterArticles = parseResponse.items?.where(haveFlutterTag).take(2).toList();
   return flutterArticles;
 }
