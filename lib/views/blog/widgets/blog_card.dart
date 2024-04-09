@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:web_portfolio/utils/hover_extensions.dart';
 import 'package:web_portfolio/views/experience/widgets/experience_container.dart';
 import 'package:webfeed/domain/rss_item.dart';
 
@@ -68,7 +69,7 @@ class BlogCard extends StatelessWidget {
             )
           ],
         ),
-      ),
+      ).moveUpHover,
     );
   }
 }
