@@ -11,9 +11,9 @@ class BlogView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureProvider<RssFeed?>(
+    return FutureProvider<List<RssItem>?>(
+      initialData: [RssItem()],
       create: (_) => getArticles(),
-      initialData: RssFeed(),
       child: const MobileDesktopViewBuilder(
         mobileView: BlogMobileView(),
         desktopView: BlogDesktopView(),
@@ -22,10 +22,13 @@ class BlogView extends StatelessWidget {
   }
 }
 
-Future<RssFeed> getArticles() async {
-  const url = 'https://cors-anywhere.herokuapp.com/https://medium.com/feed/@muhamad_haris';
+Future<List<RssItem>?> getArticles() async {
+  const url = 'https://cors-anywhere.herokuapp.com/https://medium.com/feed/@biz84';
   final uri = Uri.parse(url);
   final response = await http.get(uri);
   final parseResponse = RssFeed.parse(response.body);
-  return parseResponse;
+  haveFlutterTag(RssItem article) => article.categories!.any((category) => category.value == 'flutter');
+  final flutterArticles = parseResponse.items?.where(haveFlutterTag).toList();
+  print(flutterArticles);
+  return flutterArticles;
 }

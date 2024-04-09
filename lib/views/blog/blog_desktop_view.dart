@@ -9,7 +9,7 @@ class BlogDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final articles = context.watch<RssFeed?>();
+    final articles = context.watch<List<RssItem>?>();
     if (articles == null) return const CircularProgressIndicator();
     return DesktopViewBuilder(
       mainText: 'Blog',
