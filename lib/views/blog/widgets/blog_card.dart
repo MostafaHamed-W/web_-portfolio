@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:web_portfolio/views/experience/widgets/experience_container.dart';
 import 'package:webfeed/domain/rss_item.dart';
 
@@ -14,12 +15,6 @@ class BlogCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String removeAllHtmlTags(String htmlText) {
-      RegExp exp = RegExp(r"<[^>]*>", multiLine: true, caseSensitive: true);
-
-      return htmlText.replaceAll(exp, '');
-    }
-
     final content = removeAllHtmlTags(article?.content?.value ?? '');
     return Card(
       shape: RoundedRectangleBorder(
@@ -48,7 +43,14 @@ class BlogCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 8),
-                Text(article?.pubDate.toString() ?? '', style: textStyle(isGrey: true, isBold: false, fontSize: 15)),
+                Text(
+                  convertDate(article?.pubDate ?? DateTime.now()),
+                  style: textStyle(
+                    isGrey: true,
+                    isBold: false,
+                    fontSize: 15,
+                  ),
+                ),
                 const SizedBox(height: 8),
                 Text(
                   content,
@@ -62,3 +64,11 @@ class BlogCard extends StatelessWidget {
     );
   }
 }
+
+String removeAllHtmlTags(String htmlText) {
+  RegExp exp = RegExp(r"<[^>]*>", multiLine: true, caseSensitive: true);
+
+  return htmlText.replaceAll(exp, '');
+}
+
+String convertDate(DateTime date) => DateFormat('d MMMM yyyyy').format(date);
