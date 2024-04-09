@@ -14,6 +14,13 @@ class BlogCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String removeAllHtmlTags(String htmlText) {
+      RegExp exp = RegExp(r"<[^>]*>", multiLine: true, caseSensitive: true);
+
+      return htmlText.replaceAll(exp, '');
+    }
+
+    final content = removeAllHtmlTags(article?.content?.value ?? '');
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
@@ -44,7 +51,7 @@ class BlogCard extends StatelessWidget {
                 Text(article?.pubDate.toString() ?? '', style: textStyle(isGrey: true, isBold: false, fontSize: 15)),
                 const SizedBox(height: 8),
                 Text(
-                  article?.content?.value ?? '',
+                  content,
                   maxLines: 3,
                 ),
               ],
