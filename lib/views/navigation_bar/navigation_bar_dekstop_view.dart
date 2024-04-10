@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/sizes.dart';
 import 'package:web_portfolio/views/navigation_bar/widgets/navigation_bar_item.dart';
+import 'package:web_portfolio/views/portfolio/portfolio_view.dart';
 
 class NavigationBarDesktopView extends StatelessWidget {
   const NavigationBarDesktopView({
@@ -27,7 +28,17 @@ class NavigationBarDesktopView extends StatelessWidget {
               height: 60,
             ),
             const Spacer(),
-            for (var item in kNavigationItems) NavigationBarItem(onTap: () {}, text: item.text, isSmall: isSmall),
+            for (var item in kNavigationItems)
+              NavigationBarItem(
+                  onTap: () {
+                    // scrollController.animateTo(
+                    //   3002,
+                    //   duration: const Duration(milliseconds: 500),
+                    //   curve: Curves.easeInOut,
+                    // );
+                  },
+                  text: item.text,
+                  isSmall: isSmall),
             const SizedBox(width: 20),
             HireMeButton(isSmall: isSmall),
           ],
