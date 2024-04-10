@@ -19,18 +19,19 @@ class ExperienceDesktopView extends StatelessWidget {
           children: [
             for (int rowIndex = 0; rowIndex < kExperiencesList.length / 2; rowIndex++)
               Expanded(
-                  child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  for (int index = 0; index < kExperiencesList.length / 2; index++)
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ExperienceContainer(experience: kExperiencesList.elementAt(2 * rowIndex + index)),
-                    )
-                ],
-              )),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    for (int index = 0; index < kExperiencesList.length / 2; index++)
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ExperienceContainer(experience: kExperiencesList.elementAt(2 * rowIndex + index)),
+                      )
+                  ],
+                ),
+              ),
           ],
-        )
+        ),
       ],
     );
   }

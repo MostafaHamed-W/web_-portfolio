@@ -41,6 +41,7 @@ class DesktopViewBuilder extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold),
           ),
           ...children,
+          const SizedBox(height: 20),
         ],
       ),
     );
