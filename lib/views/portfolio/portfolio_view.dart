@@ -40,6 +40,16 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          scrollController.animateTo(
+            0,
+            duration: const Duration(milliseconds: 700),
+            curve: Curves.easeInOut,
+          );
+        },
+        child: const Icon(Icons.arrow_upward),
+      ),
       drawer: const DrawerView(),
       body: SingleChildScrollView(
         controller: scrollController,
