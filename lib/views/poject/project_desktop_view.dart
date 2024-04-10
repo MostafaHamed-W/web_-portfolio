@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/components/desktop_view_builder.dart';
 import 'package:web_portfolio/utils/constants.dart';
+import 'package:web_portfolio/utils/hover_extensions.dart';
 
 class ProjectDesktopView extends StatelessWidget {
   const ProjectDesktopView({super.key});
@@ -51,7 +52,7 @@ class ProjectItemWidget extends StatelessWidget {
       child: Image.asset(
         project,
         width: width,
-      ),
+      ).moveUpHover,
     );
   }
 }
