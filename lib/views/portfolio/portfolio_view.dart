@@ -8,6 +8,7 @@ import 'package:web_portfolio/views/experience/experience_view.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
 import 'package:web_portfolio/views/poject/project_view.dart';
+import 'package:web_portfolio/views/portfolio/back_to_top_button.dart';
 import 'package:web_portfolio/views/skills/skills_view.dart';
 
 class PortfolioView extends StatefulWidget {
@@ -74,35 +75,6 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
         ),
       ),
     );
-  }
-}
-
-class BackToTopButton extends StatelessWidget {
-  const BackToTopButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final scrollController = context.watch<ScrollController>();
-    return scrollController.isZeroOffset
-        ? const SizedBox()
-        : FloatingActionButton(
-            onPressed: () {
-              scrollController.animateTo(
-                0,
-                duration: const Duration(milliseconds: 700),
-                curve: Curves.easeInOut,
-              );
-            },
-            child: const Icon(Icons.arrow_upward),
-          );
-  }
-}
-
-extension on ScrollController {
-  bool get isZeroOffset {
-    return offset == 0;
   }
 }
 

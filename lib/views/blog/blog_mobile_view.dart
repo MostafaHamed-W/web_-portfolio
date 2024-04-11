@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:web_portfolio/components/mobile_view_builder.dart';
 import 'package:web_portfolio/views/blog/widgets/blog_card.dart';
-import 'package:webfeed/domain/rss_feed.dart';
 import 'package:webfeed/domain/rss_item.dart';
 
 class BlogMobileView extends StatelessWidget {
