@@ -17,6 +17,7 @@ class NavigationBarDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final navigationItems = context.watch<List<NavigationItem>>();
+    final scrollController = context.watch<ScrollController>();
     return SizedBox(
       height: Sizes.navBarHeight,
       width: Sizes.defaultWidth,
@@ -33,11 +34,11 @@ class NavigationBarDesktopView extends StatelessWidget {
             for (var item in navigationItems)
               NavigationBarItem(
                   onTap: () {
-                    // scrollController.animateTo(
-                    //   3002,
-                    //   duration: const Duration(milliseconds: 500),
-                    //   curve: Curves.easeInOut,
-                    // );
+                    scrollController.animateTo(
+                      item.position,
+                      duration: const Duration(milliseconds: 700),
+                      curve: Curves.easeInOut,
+                    );
                   },
                   text: item.text,
                   isSmall: isSmall),

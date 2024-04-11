@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -8,15 +7,8 @@ import 'package:web_portfolio/views/drawer/drawer_view.dart';
 import 'package:web_portfolio/views/experience/experience_view.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
-import 'package:web_portfolio/views/navigation_bar/widgets/navigation_bar_item.dart';
-
 import 'package:web_portfolio/views/poject/project_view.dart';
 import 'package:web_portfolio/views/skills/skills_view.dart';
-
-final ScrollController scrollController = ScrollController(
-    // Set the initial offset
-    // initialScrollOffset: 0,
-    );
 
 class PortfolioView extends StatefulWidget {
   const PortfolioView({super.key});
@@ -26,6 +18,11 @@ class PortfolioView extends StatefulWidget {
 }
 
 class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
+  final ScrollController scrollController = ScrollController(
+      // Set the initial offset
+      // initialScrollOffset: 0,
+      );
+
   final projectsKey = GlobalKey();
   final skillsKey = GlobalKey();
   final experiencesKey = GlobalKey();
@@ -54,7 +51,10 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
     final width = MediaQuery.of(context).size.width;
 
     return MultiProvider(
-      providers: [ProxyProvider0<List<NavigationItem>>(update: (_, __) => navigationItems)],
+      providers: [
+        ProxyProvider0<List<NavigationItem>>(update: (_, __) => navigationItems),
+        ChangeNotifierProvider<ScrollController>(create: (_) => scrollController),
+      ],
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
