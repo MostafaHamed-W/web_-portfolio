@@ -56,16 +56,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
         ChangeNotifierProvider<ScrollController>(create: (_) => scrollController),
       ],
       child: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            scrollController.animateTo(
-              0,
-              duration: const Duration(milliseconds: 700),
-              curve: Curves.easeInOut,
-            );
-          },
-          child: const Icon(Icons.arrow_upward),
-        ),
+        floatingActionButton: const BackToTopButton(),
         drawer: const DrawerView(),
         body: SingleChildScrollView(
           controller: scrollController,
@@ -83,6 +74,35 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
         ),
       ),
     );
+  }
+}
+
+class BackToTopButton extends StatelessWidget {
+  const BackToTopButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final scrollController = context.watch<ScrollController>();
+    return scrollController.isZeroOffset
+        ? const SizedBox()
+        : FloatingActionButton(
+            onPressed: () {
+              scrollController.animateTo(
+                0,
+                duration: const Duration(milliseconds: 700),
+                curve: Curves.easeInOut,
+              );
+            },
+            child: const Icon(Icons.arrow_upward),
+          );
+  }
+}
+
+extension on ScrollController {
+  bool get isZeroOffset {
+    return offset == 0;
   }
 }
 
