@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/sizes.dart';
 import 'package:web_portfolio/views/navigation_bar/widgets/navigation_bar_item.dart';
@@ -15,6 +16,7 @@ class NavigationBarDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final navigationItems = context.watch<List<NavigationItem>>();
     return SizedBox(
       height: Sizes.navBarHeight,
       width: Sizes.defaultWidth,
@@ -28,7 +30,7 @@ class NavigationBarDesktopView extends StatelessWidget {
               height: 60,
             ),
             const Spacer(),
-            for (var item in [])
+            for (var item in navigationItems)
               NavigationBarItem(
                   onTap: () {
                     // scrollController.animateTo(

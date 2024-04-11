@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:web_portfolio/utils/constants.dart';
+import 'package:web_portfolio/views/portfolio/portfolio_view.dart';
 
 class DrawerMobileView extends StatelessWidget {
   const DrawerMobileView({
@@ -9,6 +11,7 @@ class DrawerMobileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final navigationItems = context.watch<List<NavigationItem>>();
     return Drawer(
       // Add a ListView to the drawer. This ensures the user can scroll
       // through the options in the drawer if there isn't enough vertical
@@ -24,7 +27,7 @@ class DrawerMobileView extends StatelessWidget {
           //   child: Text('Drawer Header'),
           // ),
           const SizedBox(height: 20),
-          for (var item in [])
+          for (var item in navigationItems)
             Column(
               children: [
                 ListTile(

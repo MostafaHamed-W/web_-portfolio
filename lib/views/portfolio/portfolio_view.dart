@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:web_portfolio/views/blog/blog_view.dart';
 import 'package:web_portfolio/views/drawer/drawer_view.dart';
 import 'package:web_portfolio/views/experience/experience_view.dart';
@@ -31,17 +32,20 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   final blogKey = GlobalKey();
   final homeKey = GlobalKey();
   final introKey = GlobalKey();
+  List<NavigationItem> navigationItems = [];
 
   @override
   FutureOr<void> afterFirstLayout(BuildContext context) {
-    final kNavigationItems = [
-      NavigationItem('Home', key: homeKey),
-      NavigationItem('Intro', key: introKey),
-      NavigationItem('Experience', key: experiencesKey),
-      NavigationItem('Skills', key: skillsKey),
-      NavigationItem('Projecs', key: projectsKey),
-    ];
-    print(getPosition(blogKey));
+    setState(() {
+      navigationItems = [
+        NavigationItem('Home', key: homeKey),
+        NavigationItem('Intro', key: introKey),
+        NavigationItem('Experience', key: experiencesKey),
+        NavigationItem('Skills', key: skillsKey),
+        NavigationItem('Projecs', key: projectsKey),
+      ];
+    });
+    // print(getPosition(blogKey));
   }
 
   @override
@@ -49,30 +53,33 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          scrollController.animateTo(
-            0,
-            duration: const Duration(milliseconds: 700),
-            curve: Curves.easeInOut,
-          );
-        },
-        child: const Icon(Icons.arrow_upward),
-      ),
-      drawer: const DrawerView(),
-      body: SingleChildScrollView(
-        controller: scrollController,
-        child: Column(
-          children: [
-            const NavigationBarView(),
-            const HeaderView(),
-            ProjectView(key: projectsKey),
-            SkillsView(key: skillsKey),
-            ExperienceView(key: experiencesKey),
-            BlogView(key: blogKey),
-            SizedBox(height: height, width: width)
-          ],
+    return MultiProvider(
+      providers: [ProxyProvider0<List<NavigationItem>>(update: (_, __) => navigationItems)],
+      child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            scrollController.animateTo(
+              0,
+              duration: const Duration(milliseconds: 700),
+              curve: Curves.easeInOut,
+            );
+          },
+          child: const Icon(Icons.arrow_upward),
+        ),
+        drawer: const DrawerView(),
+        body: SingleChildScrollView(
+          controller: scrollController,
+          child: Column(
+            children: [
+              const NavigationBarView(),
+              const HeaderView(),
+              ProjectView(key: projectsKey),
+              SkillsView(key: skillsKey),
+              ExperienceView(key: experiencesKey),
+              BlogView(key: blogKey),
+              SizedBox(height: height, width: width)
+            ],
+          ),
         ),
       ),
     );
