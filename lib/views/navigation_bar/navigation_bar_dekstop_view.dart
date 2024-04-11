@@ -28,7 +28,7 @@ class NavigationBarDesktopView extends StatelessWidget {
               height: 60,
             ),
             const Spacer(),
-            for (var item in kNavigationItems)
+            for (var item in [])
               NavigationBarItem(
                   onTap: () {
                     // scrollController.animateTo(

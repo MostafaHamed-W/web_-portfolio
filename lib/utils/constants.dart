@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/views/experience/models/experience_info.dart';
-import 'package:web_portfolio/views/navigation_bar/widgets/navigation_bar_item.dart';
-
-const kNavigationItems = [
-  NavigationItem('Home'),
-  NavigationItem('Intro'),
-  NavigationItem('Experience'),
-  NavigationItem('Skills'),
-  NavigationItem('Projecs'),
-];
 
 const kSkillsNames = [
   "Flutter",

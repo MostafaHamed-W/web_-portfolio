@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 
-class NavigationItem {
-  final String text;
-  const NavigationItem(this.text);
-}
-
 class NavigationBarItem extends StatelessWidget {
   const NavigationBarItem({
     super.key,

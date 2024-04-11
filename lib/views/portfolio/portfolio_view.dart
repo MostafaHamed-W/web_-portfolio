@@ -7,6 +7,7 @@ import 'package:web_portfolio/views/drawer/drawer_view.dart';
 import 'package:web_portfolio/views/experience/experience_view.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
+import 'package:web_portfolio/views/navigation_bar/widgets/navigation_bar_item.dart';
 
 import 'package:web_portfolio/views/poject/project_view.dart';
 import 'package:web_portfolio/views/skills/skills_view.dart';
@@ -28,10 +29,19 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   final skillsKey = GlobalKey();
   final experiencesKey = GlobalKey();
   final blogKey = GlobalKey();
+  final homeKey = GlobalKey();
+  final introKey = GlobalKey();
 
   @override
   FutureOr<void> afterFirstLayout(BuildContext context) {
-    print(getPositions(blogKey));
+    final kNavigationItems = [
+      NavigationItem('Home', key: homeKey),
+      NavigationItem('Intro', key: introKey),
+      NavigationItem('Experience', key: experiencesKey),
+      NavigationItem('Skills', key: skillsKey),
+      NavigationItem('Projecs', key: projectsKey),
+    ];
+    print(getPosition(blogKey));
   }
 
   @override
@@ -69,9 +79,17 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   }
 }
 
-double getPositions(GlobalKey key) {
+double getPosition(GlobalKey key) {
   final RenderBox renderBox = key.currentContext?.findRenderObject() as RenderBox;
   final position = renderBox.localToGlobal(Offset.zero);
   final scrollOffset = position.dy;
   return scrollOffset;
+}
+
+class NavigationItem {
+  final String text;
+  final GlobalKey key;
+  const NavigationItem(this.text, {required this.key});
+
+  double get position => getPosition(key);
 }

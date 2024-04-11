@@ -24,7 +24,7 @@ class DrawerMobileView extends StatelessWidget {
           //   child: Text('Drawer Header'),
           // ),
           const SizedBox(height: 20),
-          for (var item in kNavigationItems)
+          for (var item in [])
             Column(
               children: [
                 ListTile(
