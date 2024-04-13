@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/utils/hover_extensions.dart';
 import 'package:web_portfolio/views/experience/widgets/experience_container.dart';
 import 'package:webfeed/domain/rss_item.dart';
@@ -36,7 +37,7 @@ class BlogCard extends StatelessWidget {
             Container(
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
-                color: Colors.redAccent,
+                color: AppColors.kPrimaryColor,
               ),
               width: double.infinity,
               padding: EdgeInsets.symmetric(vertical: isMobile ? 20 : 40, horizontal: 8),
