@@ -72,7 +72,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
                 SkillsView(key: skillsKey),
                 ExperienceView(key: experiencesKey),
                 BlogView(key: blogKey),
-                FooterView(),
+                const FooterView(),
                 // SizedBox(height: height, width: width)
               ],
             ),
