@@ -12,6 +12,7 @@ class BackToTopButton extends StatelessWidget {
     return scrollController.isZeroOffset
         ? const SizedBox()
         : FloatingActionButton(
+            mini: true,
             onPressed: () {
               scrollController.animateTo(
                 0,
