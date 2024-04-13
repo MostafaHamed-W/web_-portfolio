@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:web_portfolio/views/blog/blog_view.dart';
 import 'package:web_portfolio/views/drawer/drawer_view.dart';
 import 'package:web_portfolio/views/experience/experience_view.dart';
+import 'package:web_portfolio/views/footer/footer_view.dart';
 import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
 import 'package:web_portfolio/views/poject/project_view.dart';
@@ -59,18 +60,22 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
       child: Scaffold(
         floatingActionButton: const BackToTopButton(),
         drawer: const DrawerView(),
-        body: SingleChildScrollView(
-          controller: scrollController,
-          child: Column(
-            children: [
-              const NavigationBarView(),
-              const HeaderView(),
-              ProjectView(key: projectsKey),
-              SkillsView(key: skillsKey),
-              ExperienceView(key: experiencesKey),
-              BlogView(key: blogKey),
-              SizedBox(height: height, width: width)
-            ],
+        body: SizedBox(
+          width: width,
+          child: SingleChildScrollView(
+            controller: scrollController,
+            child: Column(
+              children: [
+                const NavigationBarView(),
+                const HeaderView(),
+                ProjectView(key: projectsKey),
+                SkillsView(key: skillsKey),
+                ExperienceView(key: experiencesKey),
+                BlogView(key: blogKey),
+                FooterView(),
+                // SizedBox(height: height, width: width)
+              ],
+            ),
           ),
         ),
       ),
