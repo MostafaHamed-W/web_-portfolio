@@ -12,7 +12,7 @@ class HeaderView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MobileDesktopViewBuilder(
-      showMobile: MediaQuery.of(context).size.width < 700,
+      showMobile: MediaQuery.of(context).size.width < 800,
       mobileView: const HeaderMobileView(),
       desktopView: const HeaderDesktopView(),
     );

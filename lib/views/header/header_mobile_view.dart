@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+import 'package:web_portfolio/utils/hover_extensions.dart';
+import 'package:web_portfolio/views/footer/widgets/social_info.dart';
 import 'package:web_portfolio/views/header/widgets/header_body.dart';
 
 class HeaderMobileView extends StatelessWidget {
@@ -26,7 +30,28 @@ class HeaderMobileView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         child: Column(
           children: [
-            const HeaderBody(isMobile: true),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Column(
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    for (var social in socials)
+                      IconButton(
+                        color: Colors.black,
+                        splashColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        onPressed: () => launchUrlString(social.url),
+                        icon: social.icon,
+                      ).moveUpHover,
+                  ],
+                ),
+                const SizedBox(width: 15),
+                const Expanded(child: HeaderBody(isMobile: true)),
+              ],
+            ),
+            SizedBox(height: 20),
             Expanded(
               child: Image.asset(
                 'assets/images/pic.png',
