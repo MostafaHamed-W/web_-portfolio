@@ -43,7 +43,7 @@ class BlogCard extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: isMobile ? 20 : 40, horizontal: 8),
               child: Text(
                 article?.title ?? '',
-                style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.white),
+                style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.black),
               ),
             ),
             Padding(
