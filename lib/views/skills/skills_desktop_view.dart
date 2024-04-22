@@ -10,52 +10,20 @@ class SkillsDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DesktopViewBuilder(
+    return const DesktopViewBuilder(
       isGraidentBackground: true,
       mainText: 'Why Choose Me',
       subText: 'My Expertise Area',
       children: [
-        const SizedBox(height: 30),
+        SizedBox(height: 30),
         Row(
           children: [
             Expanded(
-              child: Column(
-                children: [
-                  Text.rich(
-                    TextSpan(
-                      children: [
-                        const WidgetSpan(child: Icon(Icons.co_present)),
-                        const WidgetSpan(child: SizedBox(width: 10)),
-                        TextSpan(
-                          text: 'Personal Skills'.toUpperCase(),
-                          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
+              child: SkillsCustomColumn(),
             ),
             Expanded(
-              child: Column(children: [
-                Text.rich(
-                  TextSpan(
-                    children: [
-                      const WidgetSpan(child: Icon(Icons.computer)),
-                      const WidgetSpan(child: SizedBox(width: 10)),
-                      TextSpan(
-                        text: 'Technical Skills'.toUpperCase(),
-                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ],
-                  ),
-                )
-              ]),
-            )
+              child: SkillsCustomColumn(),
+            ),
           ],
         ),
         // Old skills view
@@ -76,6 +44,50 @@ class SkillsDesktopView extends StatelessWidget {
         //       ),
         //   ],
         // )
+      ],
+    );
+  }
+}
+
+class SkillsCustomColumn extends StatelessWidget {
+  const SkillsCustomColumn({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Center(
+          child: Text.rich(
+            TextSpan(
+              children: [
+                const WidgetSpan(child: Icon(Icons.co_present)),
+                const WidgetSpan(child: SizedBox(width: 10)),
+                TextSpan(
+                  text: 'Personal Skills'.toUpperCase(),
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(height: 10),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 50),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('● Very quick learner'),
+              Text('● Self motivated, hardworking'),
+              Text('● Good communication skills'),
+              Text('● Presentation and speaker'),
+            ],
+          ),
+        )
       ],
     );
   }
