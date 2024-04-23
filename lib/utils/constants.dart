@@ -100,3 +100,32 @@ final kExperiencesList = [
     ],
   ),
 ];
+
+const kTechnicalSkills = [
+  '◦ Mobile Application Development',
+  '◦ Dart - Flutter - Responsive Design',
+  '◦ OOP, SOLID Principles',
+  '◦ State Management ( Riverpod, Provider,  Bloc , GetX ',
+  "◦ Integrating with restful Api’s ( Dio, Http, APIs, JSON ",
+  "◦ Dealing with local storage ( Hive, Shared Preferences ",
+  "◦ Integrating with Firebase services",
+  "◦ Firestore, Authentication, Realtime Database",
+  "◦ Architecture patterns",
+  "◦ MVVM, Clean Architecture, DDD, Layered Architecture",
+  "◦ Basic Knowledge about Design Patterns",
+  "◦ Socket IO, Realtime",
+  "◦ Google Maps, Firebase",
+  "◦ Payment Gateway",
+  "◦ Testing and Debugging",
+  "◦ Git, Github",
+  "◦ Agile Development",
+  "◦ Basic Knowledge about Native iOS",
+  "◦ Swift, Xcode",
+];
+
+const kSoftSkills = [
+  '◦ Very quick learner',
+  '◦ Self motivated, hardworking',
+  '◦ Good communication skills',
+  '◦ Presentation and speaker',
+];
