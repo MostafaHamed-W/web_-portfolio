@@ -17,12 +17,42 @@ class SkillsDesktopView extends StatelessWidget {
       children: [
         SizedBox(height: 30),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: SkillsCustomColumn(),
+              child: SkillsCustomColumn(
+                children: [
+                  Text('◦ Very quick learner'),
+                  Text('◦ Self motivated, hardworking'),
+                  Text('◦ Good communication skills'),
+                  Text('◦ Presentation and speaker'),
+                ],
+              ),
             ),
             Expanded(
-              child: SkillsCustomColumn(),
+              child: SkillsCustomColumn(
+                children: [
+                  Text('◦ Mobile Application Development'),
+                  Text('◦ Dart - Flutter - Responsive Design'),
+                  Text('◦ OOP, SOLID Principles'),
+                  Text('◦ State Management ( Riverpod, Provider,  Bloc , GetX )'),
+                  Text("◦ Integrating with restful Api’s ( Dio, Http, APIs, JSON )"),
+                  Text("◦ Dealing with local storage ( Hive, Shared Preferences )"),
+                  Text("◦ Integrating with Firebase services"),
+                  Text("◦ Firestore, Authentication, Realtime Database"),
+                  Text("◦ Architecture patterns"),
+                  Text("◦ MVVM, Clean Architecture, DDD, Layered Architecture"),
+                  Text("◦ Basic Knowledge about Design Patterns"),
+                  Text("◦ Socket IO, Realtime"),
+                  Text("◦ Google Maps, Firebase"),
+                  Text("◦ Payment Gateway"),
+                  Text("◦ Testing and Debugging"),
+                  Text("◦ Git, Github"),
+                  Text("◦ Agile Development"),
+                  Text("◦ Basic Knowledge about Native iOS"),
+                  Text("◦ Swift, Xcode"),
+                ],
+              ),
             ),
           ],
         ),
@@ -52,7 +82,9 @@ class SkillsDesktopView extends StatelessWidget {
 class SkillsCustomColumn extends StatelessWidget {
   const SkillsCustomColumn({
     super.key,
+    required this.children,
   });
+  final List<Widget> children;
 
   @override
   Widget build(BuildContext context) {
@@ -76,16 +108,11 @@ class SkillsCustomColumn extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('● Very quick learner'),
-              Text('● Self motivated, hardworking'),
-              Text('● Good communication skills'),
-              Text('● Presentation and speaker'),
-            ],
+            children: children,
           ),
         )
       ],
