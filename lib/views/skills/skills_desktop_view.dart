@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/components/desktop_view_builder.dart';
 import 'package:web_portfolio/utils/constants.dart';
+import 'package:web_portfolio/views/skills/widgets/skills_custom_column.dart';
 
 class SkillsDesktopView extends StatelessWidget {
   const SkillsDesktopView({super.key});
@@ -17,29 +18,35 @@ class SkillsDesktopView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: SkillsCustomColumn(
-                categoryName: 'Personal Skills',
-                icon: const Icon(Icons.co_present),
-                children: [
-                  for (var skill in kSoftSkills)
-                    Text(
-                      skill,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    )
-                ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 50),
+                child: SkillsCustomColumn(
+                  categoryName: 'Personal Skills',
+                  icon: const Icon(Icons.co_present),
+                  children: [
+                    for (var skill in kSoftSkills)
+                      Text(
+                        skill,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      )
+                  ],
+                ),
               ),
             ),
             Expanded(
-              child: SkillsCustomColumn(
-                categoryName: 'Technical Skills',
-                icon: const Icon(Icons.computer),
-                children: [
-                  for (var skill in kTechnicalSkills)
-                    Text(
-                      skill,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 50),
+                child: SkillsCustomColumn(
+                  categoryName: 'Technical Skills',
+                  icon: const Icon(Icons.computer),
+                  children: [
+                    for (var skill in kTechnicalSkills)
+                      Text(
+                        skill,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -63,54 +70,6 @@ class SkillsDesktopView extends StatelessWidget {
         //   ],
         // )
       ],
-    );
-  }
-}
-
-class SkillsCustomColumn extends StatelessWidget {
-  const SkillsCustomColumn({
-    super.key,
-    required this.children,
-    required this.categoryName,
-    required this.icon,
-  });
-  final List<Widget> children;
-  final String categoryName;
-  final Icon icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 50),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Center(
-            child: Text.rich(
-              TextSpan(
-                children: [
-                  WidgetSpan(child: icon),
-                  const WidgetSpan(child: SizedBox(width: 10)),
-                  TextSpan(
-                    text: categoryName.toUpperCase(),
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 15),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: children,
-            ),
-          )
-        ],
-      ),
     );
   }
 }

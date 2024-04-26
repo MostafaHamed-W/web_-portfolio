@@ -1,8 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/components/mobile_view_builder.dart';
 import 'package:web_portfolio/utils/constants.dart';
-import 'package:web_portfolio/views/skills/skills_desktop_view.dart';
-import 'package:web_portfolio/views/skills/widgets/outelined_skills_container.dart';
+import 'package:web_portfolio/views/skills/widgets/skills_custom_column.dart';
 
 class SkillsMobileView extends StatelessWidget {
   const SkillsMobileView({super.key});
@@ -31,7 +31,10 @@ class SkillsMobileView extends StatelessWidget {
           icon: const Icon(Icons.computer),
           children: [
             for (var skill in kTechnicalSkills)
-              Text(
+              AutoSizeText(
+                maxLines: 1,
+                minFontSize: 9, // set your desired minimum font size
+                maxFontSize: 24, // set your desired maximum font size
                 skill,
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:web_portfolio/utils/hover_extensions.dart';
 import 'package:web_portfolio/views/footer/widgets/social_info.dart';
@@ -51,7 +50,7 @@ class HeaderMobileView extends StatelessWidget {
                 const Expanded(child: HeaderBody(isMobile: true)),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: Image.asset(
                 'assets/images/pic.png',
