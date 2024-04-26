@@ -26,7 +26,7 @@ class DesktopViewBuilder extends StatelessWidget {
       width: Sizes.defaultWidth,
       decoration: isGraidentBackground ? getGraidentBackround(context) : null,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 30),
           Text(
@@ -38,7 +38,7 @@ class DesktopViewBuilder extends StatelessWidget {
           ),
           Text(
             subText,
-            style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold),
           ),
           ...children,
           const SizedBox(height: 20),
