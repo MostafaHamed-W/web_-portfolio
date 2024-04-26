@@ -19,18 +19,20 @@ class ExperienceDesktopView extends StatelessWidget {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50),
-                child: SkillsCustomColumn(
+                padding: EdgeInsets.only(left: 80),
+                child: CustomSplitColumn(
                   categoryName: 'Education & Trainings',
                   icon: Icon(Icons.science),
-                  children: [],
+                  children: [
+                    CustomExperienceCard(),
+                  ],
                 ),
               ),
             ),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 50),
-                child: SkillsCustomColumn(
+                child: CustomSplitColumn(
                   categoryName: 'Professional Experience',
                   icon: Icon(Icons.work),
                   children: [],
@@ -61,6 +63,34 @@ class ExperienceDesktopView extends StatelessWidget {
         //       ),
         //   ],
         // ),
+      ],
+    );
+  }
+}
+
+class CustomExperienceCard extends StatelessWidget {
+  const CustomExperienceCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('July 2021', style: TextStyle(fontWeight: FontWeight.bold)),
+        SizedBox(width: 50),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Faculty Of Engineering Tanta University',
+              maxLines: 2,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+            ),
+            Text('Department: Computer and Automatic Control\nGraduation Project: Online Exam Platform - Exclent "A"'),
+          ],
+        )
       ],
     );
   }

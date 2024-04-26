@@ -15,7 +15,7 @@ class SkillsMobileView extends StatelessWidget {
       isGraidentBackground: true,
       hasPadding: true,
       children: [
-        SkillsCustomColumn(
+        CustomSplitColumn(
           categoryName: 'Personal Skills',
           icon: const Icon(Icons.co_present),
           children: [
@@ -26,7 +26,7 @@ class SkillsMobileView extends StatelessWidget {
               )
           ],
         ),
-        SkillsCustomColumn(
+        CustomSplitColumn(
           categoryName: 'Technical Skills',
           icon: const Icon(Icons.computer),
           children: [

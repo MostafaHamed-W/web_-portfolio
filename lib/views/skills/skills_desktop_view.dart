@@ -20,7 +20,7 @@ class SkillsDesktopView extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 50),
-                child: SkillsCustomColumn(
+                child: CustomSplitColumn(
                   categoryName: 'Personal Skills',
                   icon: const Icon(Icons.co_present),
                   children: [
@@ -36,7 +36,7 @@ class SkillsDesktopView extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 50),
-                child: SkillsCustomColumn(
+                child: CustomSplitColumn(
                   categoryName: 'Technical Skills',
                   icon: const Icon(Icons.computer),
                   children: [

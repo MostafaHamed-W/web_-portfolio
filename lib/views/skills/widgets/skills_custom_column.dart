@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SkillsCustomColumn extends StatelessWidget {
-  const SkillsCustomColumn({
+class CustomSplitColumn extends StatelessWidget {
+  const CustomSplitColumn({
     super.key,
     required this.children,
     required this.categoryName,
