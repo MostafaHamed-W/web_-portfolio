@@ -9,7 +9,7 @@ class SkillsDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DesktopViewBuilder(
-      isGraidentBackground: true,
+      isGraidentBackground: false,
       mainText: 'Why Choose Me',
       subText: 'My Expertise Area',
       children: [

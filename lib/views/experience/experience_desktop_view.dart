@@ -11,6 +11,7 @@ class ExperienceDesktopView extends StatelessWidget {
     return const DesktopViewBuilder(
       mainText: 'My Qualifications',
       subText: 'Awesome Journey',
+      isGraidentBackground: true,
       children: [
         SizedBox(height: 30),
         Row(
@@ -18,24 +19,34 @@ class ExperienceDesktopView extends StatelessWidget {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.only(left: 0),
+                padding: EdgeInsets.only(left: 50),
                 child: CustomSplitColumn(
                   categoryName: 'Education & Trainings',
                   icon: Icon(Icons.science),
                   children: [
                     CustomExperienceCard(
-                      date: 'July 2021',
+                      isEducation: true,
+                      date: 'Jul 2021',
                       mainTitle: 'Faculty Of Engineering Tanta University',
                       description:
                           'Department: Computer and Automatic Control\nGraduation Project: Online Exam Platform',
+                    ),
+                    SizedBox(height: 30),
+                    CustomExperienceCard(
+                      isEducation: true,
+                      date: 'Dec 2023',
+                      mainTitle: 'Flutter & Dart - The Complete Guide [2024 Edition]',
+                      description:
+                          'A Complete Guide to the Flutter SDK & Flutter Framework for building native iOS and Android apps by Maximilian Schwarzmüller',
                     ),
                   ],
                 ),
               ),
             ),
+            SizedBox(width: 30),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 0),
+                padding: EdgeInsets.only(right: 50),
                 child: CustomSplitColumn(
                   categoryName: 'Professional Experience',
                   icon: Icon(Icons.work),

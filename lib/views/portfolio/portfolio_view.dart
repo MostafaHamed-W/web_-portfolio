@@ -68,8 +68,9 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
                 const NavigationBarView(),
                 const HeaderView(),
                 ProjectView(key: projectsKey),
-                SkillsView(key: skillsKey),
+
                 ExperienceView(key: experiencesKey),
+                SkillsView(key: skillsKey),
                 BlogView(key: blogKey),
                 const FooterView(),
                 // SizedBox(height: height, width: width)
