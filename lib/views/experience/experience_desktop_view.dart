@@ -18,7 +18,7 @@ class ExperienceDesktopView extends StatelessWidget {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.only(left: 80),
+                padding: EdgeInsets.only(left: 0),
                 child: CustomSplitColumn(
                   categoryName: 'Education & Trainings',
                   icon: Icon(Icons.science),
@@ -27,7 +27,7 @@ class ExperienceDesktopView extends StatelessWidget {
                       date: 'July 2021',
                       mainTitle: 'Faculty Of Engineering Tanta University',
                       description:
-                          'Department: Computer and Automatic Control\nGraduation Project: Online Exam Platform - Exclent "A"',
+                          'Department: Computer and Automatic Control\nGraduation Project: Online Exam Platform',
                     ),
                   ],
                 ),
@@ -35,11 +35,31 @@ class ExperienceDesktopView extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50),
+                padding: EdgeInsets.symmetric(horizontal: 0),
                 child: CustomSplitColumn(
                   categoryName: 'Professional Experience',
                   icon: Icon(Icons.work),
-                  children: [],
+                  children: [
+                    CustomExperienceCard(
+                      date: 'Jan 2023 to Sep 2023 ',
+                      mainTitle: 'Junior Flutter Developer at UMIS',
+                      description:
+                          'Tanta, Egypt · On-site\nUniversity Management Information Systems (MIS)\nWorking as flutter develoepr for one year\nDeveloped and implemented UMIS application from scratch',
+                    ),
+                    SizedBox(height: 30),
+                    CustomExperienceCard(
+                      date: 'Sep 2023 to Nov 2023',
+                      mainTitle: 'Flutter Developer at Coding Site',
+                      description: 'New 15th of May, Egypt · On-site\nWorking as junior flutter developer',
+                    ),
+                    SizedBox(height: 30),
+                    CustomExperienceCard(
+                      date: 'Nov 2023 to Apr 2024',
+                      mainTitle: 'Flutter Developer at Expert CO.LTD',
+                      description:
+                          'Riyadh, Saudi Arabia · Remote\nWorking as Mobile Application Developer\nDeveloping Odex SS Mobile Application\nFor employees and managers',
+                    ),
+                  ],
                 ),
               ),
             ),

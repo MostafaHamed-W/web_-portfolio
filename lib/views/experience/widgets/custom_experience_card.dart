@@ -17,17 +17,17 @@ class CustomExperienceCard extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(date, style: const TextStyle(fontWeight: FontWeight.bold)),
-        const SizedBox(width: 50),
+        Text(date, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+        const SizedBox(width: 40),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               mainTitle,
               maxLines: 2,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
             ),
-            Text(description),
+            Text(description, style: const TextStyle(fontSize: 12)),
           ],
         )
       ],
