@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_portfolio/components/desktop_view_builder.dart';
-import 'package:web_portfolio/utils/constants.dart';
-import 'package:web_portfolio/views/experience/widgets/experience_container.dart';
+import 'package:web_portfolio/views/experience/widgets/custom_experience_card.dart';
 import 'package:web_portfolio/views/skills/widgets/skills_custom_column.dart';
 
 class ExperienceDesktopView extends StatelessWidget {
@@ -24,7 +23,12 @@ class ExperienceDesktopView extends StatelessWidget {
                   categoryName: 'Education & Trainings',
                   icon: Icon(Icons.science),
                   children: [
-                    CustomExperienceCard(),
+                    CustomExperienceCard(
+                      date: 'July 2021',
+                      mainTitle: 'Faculty Of Engineering Tanta University',
+                      description:
+                          'Department: Computer and Automatic Control\nGraduation Project: Online Exam Platform - Exclent "A"',
+                    ),
                   ],
                 ),
               ),
@@ -63,34 +67,6 @@ class ExperienceDesktopView extends StatelessWidget {
         //       ),
         //   ],
         // ),
-      ],
-    );
-  }
-}
-
-class CustomExperienceCard extends StatelessWidget {
-  const CustomExperienceCard({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('July 2021', style: TextStyle(fontWeight: FontWeight.bold)),
-        SizedBox(width: 50),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Faculty Of Engineering Tanta University',
-              maxLines: 2,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-            ),
-            Text('Department: Computer and Automatic Control\nGraduation Project: Online Exam Platform - Exclent "A"'),
-          ],
-        )
       ],
     );
   }
