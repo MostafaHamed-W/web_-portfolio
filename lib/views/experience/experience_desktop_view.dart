@@ -39,6 +39,14 @@ class ExperienceDesktopView extends StatelessWidget {
                       description:
                           'A Complete Guide to the Flutter SDK & Flutter Framework for building native iOS and Android apps by Maximilian Schwarzmüller',
                     ),
+                    SizedBox(height: 30),
+                    CustomExperienceCard(
+                      isEducation: true,
+                      date: 'Jan 2024',
+                      mainTitle: 'Flutter Foundations Course - Riverpod by Code with Andrea',
+                      description:
+                          'Learn about State Management, App Architecture, Navigation, Testing, and much more by building a Flutter eCommerce app on iOS, Android, and web.',
+                    ),
                   ],
                 ),
               ),
