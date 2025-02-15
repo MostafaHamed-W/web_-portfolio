@@ -60,23 +60,23 @@ class ExperienceDesktopView extends StatelessWidget {
                   icon: Icon(Icons.work),
                   children: [
                     CustomExperienceCard(
-                      date: 'Jan 2023 to Sep 2023 ',
-                      mainTitle: 'Junior Flutter Developer at UMIS',
+                      date: 'Jan 2023 to Sep 2023',
+                      mainTitle: 'Mobile Application Developer at UMIS',
                       description:
-                          'Tanta, Egypt · On-site\nUniversity Management Information Systems (MIS)\nWorking as flutter develoepr for one year\nDeveloped and implemented UMIS application from scratch',
+                          'Tanta, Egypt · On-site · Full-time\nUniversity Management Information Systems (MIS)\nWorking as flutter develoepr for one year\nDeveloped and implemented UMIS application from scratch',
                     ),
                     SizedBox(height: 30),
                     CustomExperienceCard(
-                      date: 'Sep 2023 to Nov 2023',
-                      mainTitle: 'Flutter Developer at Coding Site',
-                      description: 'New 15th of May, Egypt · On-site\nWorking as junior flutter developer',
+                      date: 'Jan 2024 to Jun 2023',
+                      mainTitle: 'Flutter Developer at SAIP',
+                      description: 'Riyadh, Saudi Arabia · Remote · Part-time\nWorking as Mobile Application Develoeper @ Saudi Authority for Intellectual Property',
                     ),
                     SizedBox(height: 30),
                     CustomExperienceCard(
-                      date: 'Nov 2023 to Apr 2024',
+                      date: 'Sep 2023 to Present',
                       mainTitle: 'Flutter Developer at Expert CO.LTD',
                       description:
-                          'Riyadh, Saudi Arabia · Remote\nWorking as Mobile Application Developer\nDeveloping Odex SS Mobile Application\nFor employees and managers',
+                          'Riyadh, Saudi Arabia · Remote · Full-time\nWorking as Mobile Application Developer\nDeveloping Odex SS Mobile Application\nFor employees and managers',
                     ),
                   ],
                 ),

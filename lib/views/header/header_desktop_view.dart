@@ -48,8 +48,8 @@ class HeaderDesktopView extends StatelessWidget {
           )),
           // const SizedBox(width: 50),
           Image.asset(
-            'assets/images/pic.png',
-            width: isSmall ? imageWidth : 500,
+            'assets/images/pic6.png',
+            width: isSmall ? imageWidth : 450,
           ),
           // const SizedBox(width: 40),
         ],

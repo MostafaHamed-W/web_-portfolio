@@ -16,8 +16,8 @@ class NavigationBarMobileView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
           children: [
-            SvgPicture.asset(
-              'assets/images/2.svg',
+            Image.asset(
+              'assets/images/name.webp',
               height: 40,
             ),
             const Spacer(),

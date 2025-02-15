@@ -13,7 +13,7 @@ class BlogView extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureProvider<List<RssItem>?>(
       initialData: [RssItem()],
-      create: (_) => getArticles(),
+      create: (_) {},
       child: const MobileDesktopViewBuilder(
         mobileView: BlogMobileView(),
         desktopView: BlogDesktopView(),

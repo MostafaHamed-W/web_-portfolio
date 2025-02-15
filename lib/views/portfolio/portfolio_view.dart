@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:web_portfolio/views/blog/blog_view.dart';
 import 'package:web_portfolio/views/drawer/drawer_view.dart';
 import 'package:web_portfolio/views/experience/experience_view.dart';
 import 'package:web_portfolio/views/footer/footer_view.dart';
@@ -10,7 +9,6 @@ import 'package:web_portfolio/views/header/header_view.dart';
 import 'package:web_portfolio/views/navigation_bar/navigation_bar_view.dart';
 import 'package:web_portfolio/views/poject/project_view.dart';
 import 'package:web_portfolio/views/portfolio/back_to_top_button.dart';
-import 'package:web_portfolio/views/skills/skills_view.dart';
 
 class PortfolioView extends StatefulWidget {
   const PortfolioView({super.key});
@@ -38,10 +36,11 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
     setState(() {
       navigationItems = [
         NavigationItem('Home', key: homeKey),
-        NavigationItem('Intro', key: introKey),
-        NavigationItem('Experience', key: experiencesKey),
-        NavigationItem('Skills', key: skillsKey),
         NavigationItem('Projecs', key: projectsKey),
+        NavigationItem('Experience', key: experiencesKey),
+        // NavigationItem('Intro', key: introKey),
+        // NavigationItem('Skills', key: skillsKey),
+      
       ];
     });
     // print(getPosition(blogKey));
@@ -68,10 +67,9 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
                 const NavigationBarView(),
                 const HeaderView(),
                 ProjectView(key: projectsKey),
-
                 ExperienceView(key: experiencesKey),
-                SkillsView(key: skillsKey),
-                BlogView(key: blogKey),
+                // SkillsView(key: skillsKey),
+                // BlogView(key: blogKey),
                 const FooterView(),
                 // SizedBox(height: height, width: width)
               ],

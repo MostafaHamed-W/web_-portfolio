@@ -8,6 +8,10 @@ class ExperienceView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MobileDesktopViewBuilder(mobileView: ExperienceMobileView(), desktopView: ExperienceDesktopView());
+    return MobileDesktopViewBuilder(
+      showMobile: MediaQuery.of(context).size.width < 850,
+      mobileView: const ExperienceMobileView(),
+      desktopView: const ExperienceDesktopView(),
+    );
   }
 }

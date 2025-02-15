@@ -66,37 +66,23 @@ class HireMeButton extends StatelessWidget {
 final kExperiencesList = [
   ExperienceInfo(
     company: 'Flutter Developer @Tanta University UMIS',
-    timeline: 'Feb 2023 - Oct 2023  (9 mos) - Tanta',
+    timeline: 'Jan 2023 to Sep 2023',
     descriptions: [
-      '- Working as junior flutter developer',
-      '- Created UMIS Application for students & doctors',
-      '- Worked in team from 4 developers',
+      'Tanta, Egypt · On-site · Full-time\nUniversity Management Information Systems (MIS)\nWorking as flutter develoepr for one year\nDeveloped and implemented UMIS application from scratch',
     ],
   ),
   ExperienceInfo(
-    company: 'Flutter Developer @Coding Site(StartUp)',
-    timeline: 'Oct 2023 - Nov 2023  (1 mos) - New 15th of May',
+    company: 'Flutter Developer at SAIP',
+    timeline: 'Jan 2024 to Jun 2023',
     descriptions: [
-      '- Making within e comercing & Waregouse projects ',
-      '- Developing MyFridge Mobile application',
+      'Riyadh, Saudi Arabia · Remote · Part-time\nWorking as Mobile Application Develoeper @ Saudi Authority for Intellectual Property',
     ],
   ),
   ExperienceInfo(
-    company: 'Mobile Application Developer @Expert CO.LTD',
-    timeline: 'Nov 2023  - Present - Saudia',
+    company: 'Flutter Developer at Expert CO.LTD',
+    timeline: 'Oct 2023 to Present',
     descriptions: [
-      '- Developed Odex SS Application',
-      '- Developed & Maintained Al-Alameya Application ',
-      '- Worked in team from 3 developers'
-    ],
-  ),
-  ExperienceInfo(
-    company: 'Mobile Application Developer @SAIP',
-    timeline: 'Jan 2024  - Present - Saudia',
-    descriptions: [
-      '- Developing Saipers Gate Application',
-      '- Developed & Maintained Saipers Gate Application ',
-      '- Deploying & Version Update Saipers Gate'
+      'Riyadh, Saudi Arabia · Remote · Full-time\nWorking as Mobile Application Developer\nDeveloping Odex SS Mobile Application\nFor employees and managers'
     ],
   ),
 ];

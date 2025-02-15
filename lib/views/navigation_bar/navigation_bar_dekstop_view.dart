@@ -26,8 +26,8 @@ class NavigationBarDesktopView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 50),
         child: Row(
           children: [
-            SvgPicture.asset(
-              'assets/images/2.svg',
+            Image.asset(
+              'assets/images/name.webp',
               height: 60,
             ),
             const Spacer(),
