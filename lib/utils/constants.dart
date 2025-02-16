@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_portfolio/services/whats_app_service.dart';
 import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/views/experience/models/experience_info.dart';
 
@@ -51,7 +52,9 @@ class HireMeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        WhatsAppService.openWhatsApp("+201022212981", "Hello Mostafa! I'm interested in hiring you.");
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.kPrimaryColor,
         padding: EdgeInsets.symmetric(vertical: isSmall ? 10 : 17, horizontal: isSmall ? 8 : 15),
