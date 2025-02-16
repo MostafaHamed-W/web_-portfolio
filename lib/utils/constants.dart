@@ -25,12 +25,16 @@ const kSpotSavvy = 'assets/images/projects/spot_savvy.png';
 const kBrightMemo = 'assets/images/projects/bight_memo.png';
 const kSpotSavvyBlack = 'assets/images/projects/spot_savvy_black.png';
 const kPulseTalk = 'assets/images/projects/pulse_talk.png';
+const kSpaxet = 'assets/images/projects/spaxet.png';
+const kStepsCrm = 'assets/images/projects/stepsCrm.png';
 
 const List<String> kProjectsPohotos = [
-  kSaipersGate,
-  kGameFusion,
   kOdexss,
+  kSaipersGate,
+  kSpaxet,
+  kGameFusion,
   kAlameya,
+  kStepsCrm,
   kInstaClone,
   kBookHunter,
   kSpotSavvy,
@@ -65,24 +69,22 @@ class HireMeButton extends StatelessWidget {
 
 final kExperiencesList = [
   ExperienceInfo(
-    company: 'Flutter Developer @Tanta University UMIS',
-    timeline: 'Jan 2023 to Sep 2023',
-    descriptions: [
-      'Tanta, Egypt · On-site · Full-time\nUniversity Management Information Systems (MIS)\nWorking as flutter develoepr for one year\nDeveloped and implemented UMIS application from scratch',
-    ],
+    company: 'Mobile Application Developer at Expert CO.LTD',
+    timeline: 'Oct 2023 to Present',
+    descriptions: ['Riyadh, Saudi Arabia · Remote · Full-time\nWorking as Mobile Application Developer\nDeveloping Odex SS Mobile Application\nFor employees and managers'],
   ),
   ExperienceInfo(
-    company: 'Flutter Developer at SAIP',
+    company: 'Mobile Application Developer at SAIP',
     timeline: 'Jan 2024 to Jun 2023',
     descriptions: [
       'Riyadh, Saudi Arabia · Remote · Part-time\nWorking as Mobile Application Develoeper @ Saudi Authority for Intellectual Property',
     ],
   ),
   ExperienceInfo(
-    company: 'Flutter Developer at Expert CO.LTD',
-    timeline: 'Oct 2023 to Present',
+    company: 'Mobile Application Developer @Tanta University UMIS',
+    timeline: 'Jan 2023 to Sep 2023',
     descriptions: [
-      'Riyadh, Saudi Arabia · Remote · Full-time\nWorking as Mobile Application Developer\nDeveloping Odex SS Mobile Application\nFor employees and managers'
+      'Tanta, Egypt · On-site · Full-time\nUniversity Management Information Systems (MIS)\nWorking as flutter develoepr for one year\nDeveloped and implemented UMIS application from scratch',
     ],
   ),
 ];

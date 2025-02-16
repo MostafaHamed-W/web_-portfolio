@@ -26,10 +26,9 @@ class ExperienceDesktopView extends StatelessWidget {
                   children: [
                     CustomExperienceCard(
                       isEducation: true,
-                      date: 'Jul 2021',
-                      mainTitle: 'Faculty Of Engineering Tanta University',
-                      description:
-                          'Department: Computer and Automatic Control\nGraduation Project: Online Exam Platform',
+                      date: 'Jan 2024',
+                      mainTitle: 'Flutter Foundations Course - Riverpod by Code with Andrea',
+                      description: 'Learn about State Management, App Architecture, Navigation, Testing, and much more by building a Flutter eCommerce app on iOS, Android, and web.',
                     ),
                     SizedBox(height: 30),
                     CustomExperienceCard(
@@ -42,10 +41,10 @@ class ExperienceDesktopView extends StatelessWidget {
                     SizedBox(height: 30),
                     CustomExperienceCard(
                       isEducation: true,
-                      date: 'Jan 2024',
-                      mainTitle: 'Flutter Foundations Course - Riverpod by Code with Andrea',
+                      date: 'Jul 2021',
+                      mainTitle: 'Faculty Of Engineering Tanta University',
                       description:
-                          'Learn about State Management, App Architecture, Navigation, Testing, and much more by building a Flutter eCommerce app on iOS, Android, and web.',
+                          'Department: Computer and Automatic Control\nGraduation Project: Online Exam Platform',
                     ),
                   ],
                 ),
@@ -59,24 +58,25 @@ class ExperienceDesktopView extends StatelessWidget {
                   categoryName: 'Professional Experience',
                   icon: Icon(Icons.work),
                   children: [
+
+                    CustomExperienceCard(
+                      date: 'Sep 2023 to Present',
+                      mainTitle: 'Mobile Application Developer at Expert CO.LTD',
+                      description:
+                          'Riyadh, Saudi Arabia · Remote · Full-time\nWorking as Mobile Application Developer\nDeveloping Odex SS Mobile Application\nFor employees and managers',
+                    ),
+                    SizedBox(height: 30),
+                    CustomExperienceCard(
+                      date: 'Jan 2024 to Jun 2023',
+                      mainTitle: 'Mobile Application Developer at SAIP',
+                      description: 'Riyadh, Saudi Arabia · Remote · Part-time\nWorking as Mobile Application Develoeper @ Saudi Authority for Intellectual Property',
+                    ),
+                    SizedBox(height: 30),
                     CustomExperienceCard(
                       date: 'Jan 2023 to Sep 2023',
                       mainTitle: 'Mobile Application Developer at UMIS',
                       description:
                           'Tanta, Egypt · On-site · Full-time\nUniversity Management Information Systems (MIS)\nWorking as flutter develoepr for one year\nDeveloped and implemented UMIS application from scratch',
-                    ),
-                    SizedBox(height: 30),
-                    CustomExperienceCard(
-                      date: 'Jan 2024 to Jun 2023',
-                      mainTitle: 'Flutter Developer at SAIP',
-                      description: 'Riyadh, Saudi Arabia · Remote · Part-time\nWorking as Mobile Application Develoeper @ Saudi Authority for Intellectual Property',
-                    ),
-                    SizedBox(height: 30),
-                    CustomExperienceCard(
-                      date: 'Sep 2023 to Present',
-                      mainTitle: 'Flutter Developer at Expert CO.LTD',
-                      description:
-                          'Riyadh, Saudi Arabia · Remote · Full-time\nWorking as Mobile Application Developer\nDeveloping Odex SS Mobile Application\nFor employees and managers',
                     ),
                   ],
                 ),

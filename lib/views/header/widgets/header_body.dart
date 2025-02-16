@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:web_portfolio/services/pdf_download_service.dart';
 import 'package:web_portfolio/utils/colors.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/hover_extensions.dart';
@@ -46,15 +47,16 @@ class HeaderBody extends StatelessWidget {
         SizedBox(height: isMobile ? 5 : 15),
         AutoSizeText(
           "Are you seeking innovation? Allow me to anticipate your needs and construct your vision\nWith proficiency in Flutter, I specialize in developing high-performance applications. Let's collaborate to bring your next project to fruition.",
-          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-              fontSize: isMobile ? 11 : 14, color: Colors.grey, fontFamily: kAvertaFont, fontWeight: FontWeight.w500),
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: isMobile ? 11 : 14, color: Colors.grey, fontFamily: kAvertaFont, fontWeight: FontWeight.w500),
           maxLines: 3,
         ),
         const SizedBox(height: 30),
         Row(
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () async {
+                await PdfDownloadService.downloadLocalPdf('assets/mostafa_hamed_flutter_developer.pdf', 'mostafa_hamed_flutter_developer');
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.kPrimaryColor,
                 padding: EdgeInsets.symmetric(vertical: isSmall ? 10 : 17, horizontal: isSmall ? 8 : 15),
@@ -64,10 +66,7 @@ class HeaderBody extends StatelessWidget {
               ),
               child: Text(
                 'Download CV',
-                style: Theme.of(context)
-                    .textTheme
-                    .labelLarge
-                    ?.copyWith(color: Colors.white, fontSize: isSmall ? 12 : null),
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.white, fontSize: isSmall ? 12 : null),
               ),
             ).moveUpHover,
             const SizedBox(width: 30),
@@ -80,17 +79,13 @@ class HeaderBody extends StatelessWidget {
                   EdgeInsets.symmetric(vertical: isSmall ? 10 : 17, horizontal: isSmall ? 8 : 15),
                 ),
                 side: MaterialStateProperty.all(const BorderSide(color: AppColors.kPrimaryColor)), // Border color
-                shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))), // Border radius
+                shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))), // Border radius
 
                 backgroundColor: MaterialStateProperty.all(Colors.transparent), // Transparent button
               ),
               child: Text(
                 'Contact Me',
-                style: Theme.of(context)
-                    .textTheme
-                    .labelLarge
-                    ?.copyWith(color: Colors.black, fontSize: isSmall ? 12 : null),
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.black, fontSize: isSmall ? 12 : null),
               ),
             ).moveUpHover,
           ],

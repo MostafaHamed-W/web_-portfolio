@@ -76,6 +76,7 @@ flutter:
     - family: Averta
       fonts:
         - asset: assets/fonts/AvertaSemibold.ttf
+        - asset: assets/mostafa_hamed_flutter_developer.pdf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
